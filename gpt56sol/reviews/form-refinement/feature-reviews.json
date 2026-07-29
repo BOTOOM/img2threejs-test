@@ -1,0 +1,5 @@
+[
+  {"id":"paired-quadruped-silhouette","score":0.80,"visible":true,"notes":"Macro paired silhouette remains within threshold after added relief and curves."},
+  {"id":"oversized-eye-system","score":0.84,"visible":true,"notes":"Eye scale and placement retain the structural-pass 0.84 match while adding concentric iris, large round pupil, and convex transparent cornea."},
+  {"id":"feline-face-structure","score":0.80,"visible":true,"notes":"Muzzles, noses, chins, ear interiors, and wide attached whisker fans read as feline; exact ear curvature and whisker flow remain stylized."}
+]

@@ -1,0 +1,483 @@
+{
+  "targetName": "Two Stylized Cats on a Chair (black shorthair + brown mackerel tabby)",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/../gatos.png",
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "pair of domestic cats (Felis catus) in an upright sit, stylized 3D-animation render: black shorthair on the left, brown mackerel tabby with white bib/socks on the right",
+      "primaryDomain": "object",
+      "formLanguage": [
+        "organic",
+        "sculptural",
+        "fabric-like"
+      ],
+      "structureKind": [
+        "articulated assembly",
+        "compound object",
+        "branching hierarchy",
+        "repeated modules"
+      ],
+      "motionPotential": [
+        "articulated",
+        "bendable",
+        "whole-object transform"
+      ],
+      "materialFamilies": [
+        "skin-like",
+        "cloth",
+        "glass-like",
+        "mixed"
+      ],
+      "notes": "Two separate subjects under one root, each an eight-level quadruped hierarchy. Materials split into six families: black satin coat, agouti tabby coat, white fur (bib/socks/muzzle), translucent ear membrane, glossy eye (iris + pupil + cornea), and nose leather.",
+      "primaryDomainRationale": "Deliberately NOT 'character'/'hybrid'. In this skill version the character track (new_sculpt_spec.py apply_character_template) builds a HUMANOID bust: head/neck/torso/arms plus hair, glasses and headphones, and --strict-quality then demands a humanoid anatomy block (styleHeads, torso/legs head-unit ratios, eyeLine/noseBase/mouthLine). Those are wrong for a quadruped. Verified by grep: no quadruped/creature/animal/bodyPlan body plan exists anywhere in forge/*.py, although README.md line 158 advertises a shipped 'creature generator'. The quadruped body plan and its body-unit proportion system are therefore hand-authored here in animalAnatomy, and primaryDomain stays 'object' so the humanoid template is never applied."
+    },
+    "complexity": {
+      "tier": "ultra-complex",
+      "scores": {
+        "silhouetteComplexity": 3,
+        "componentCount": 3,
+        "hierarchyDepth": 3,
+        "repetitionDensity": 3,
+        "materialLayerCount": 3,
+        "localDetailDensity": 3,
+        "occlusionRisk": 3,
+        "actionReadinessNeed": 2
+      },
+      "estimatedCounts": {
+        "macroComponents": 6,
+        "mesoComponents": 34,
+        "microFeatureGroups": 14,
+        "materialLayers": 8,
+        "repetitionSystems": 4
+      },
+      "reasoning": [
+        "silhouette 3: two organic sitting forms, each with an interrupted outline (two ear spikes, cheek ruff, separated forelegs, four-toed paws). Measured with tools/probe.py: the black cat's outline turns direction 34 times between y=157 and y=944.",
+        "componentCount 3: per cat there are head, two ears with inner/outer surfaces, two eyes of three parts each, muzzle, nose, two forelegs, two front paws, one visible hind foot, haunch, torso, neck and an inferred tail. Two cats double that.",
+        "hierarchyDepth 3: root -> cat -> torso -> neck -> head -> ear -> ear-membrane is six levels before micro detail.",
+        "repetitionDensity 3: about 22 mackerel stripes on the tabby, 6 forehead 'M' stripes, 12-14 whiskers per cheek per cat, 4 toes per paw across 6 visible paws.",
+        "materialLayerCount 3: black satin coat, agouti tabby coat, white fur, translucent ear membrane, three-part eye, nose leather - each with its own roughness/normal response.",
+        "localDetailDensity 3: directional fur strands, agouti stripe banding, backlit ear-hair fringe, corneal specular, sheen band down the black chest, contact shadows under the paws.",
+        "occlusionRisk 3: the photo shows one front-three-quarter view only. Both tails, both backs, both undersides, the tabby's right hind foot and the black cat's right hind foot are not visible at all.",
+        "actionReadinessNeed 2: the request asks for head, ear and tail pivots plus a looping idle tick (breathing, blink, tail sway) - no destruction, no detach."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "ultra-complex",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "Two subjects, six material families, four repetition systems and a required idle rig. Anything shallower than macro+meso+micro would collapse the ear membrane, the eye stack and the tabby striping into flat colour, which is exactly what makes a cat reconstruction read as a toy."
+    },
+    "unknownsToResolveBeforeImplementation": [],
+    "detailInventory": {
+      "scanMethod": "component-zones",
+      "targetMinDetails": 16,
+      "note": "Enumerate every identity-defining small detail before authoring the spec. Each detail must map to a component.localFeatures entry or material.localOverrides entry, never prose only. Use forge/stage1_intake/build_detail_inventory.py to scan zones.",
+      "details": []
+    },
+    "anatomy": {
+      "applies": false,
+      "styleHeads": 0.0,
+      "proportions": {
+        "headUnit": 0.0,
+        "torso": 0.0,
+        "legs": 0.0,
+        "shoulderWidth": 0.0,
+        "hipWidth": 0.0
+      },
+      "pose": {
+        "type": "unassessed",
+        "jointAngles": {}
+      },
+      "faceLandmarks": {
+        "eyeLine": 0.0,
+        "eyeSpacing": 0.0,
+        "noseBase": 0.0,
+        "mouthLine": 0.0,
+        "hairline": 0.0
+      },
+      "features": [],
+      "confidence": 0.0,
+      "note": "Intentionally not applicable: the humanoid anatomy block (styleHeads, torso/legs head-unit ratios, faceLandmarks eyeLine/noseBase/mouthLine as fractions of a standing biped) does not describe a sitting quadruped. The equivalent feline measurements live in preSpecAssessment.animalAnatomy, expressed in HL (head-length) units."
+    },
+    "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/../gatos.png",
+    "inferredRegions": [
+      {
+        "region": "both tails",
+        "visibility": "not visible",
+        "confidence": 0.2,
+        "inference": "Neither tail appears anywhere in the frame - both are behind the bodies or off the seat. Length, thickness, curl and (for the tabby) whether the tail is ringed or tipped are unknown. Authored from breed-typical proportions: tail length 2.4 HL, base diameter 0.20 HL, tapering to 0.12 HL; the tabby's tail carries the same mackerel banding as its flank because mackerel tabbies are ringed-tailed, but this is species prior, not evidence."
+      },
+      {
+        "region": "both backs and spines",
+        "visibility": "not visible",
+        "confidence": 0.35,
+        "inference": "Back arch and shoulder-blade relief are extrapolated from the visible front-three-quarter shoulder line. The tabby's dorsal stripe (spine line) is asserted from the mackerel pattern prior."
+      },
+      {
+        "region": "both undersides / bellies",
+        "visibility": "occluded by the sitting pose",
+        "confidence": 0.3,
+        "inference": "In an upright sit the belly is fully hidden. The tabby's white bib is assumed to continue as a white belly, which is typical for this coat pattern but is not visible."
+      },
+      {
+        "region": "black cat's right hind foot",
+        "visibility": "occluded",
+        "confidence": 0.3,
+        "inference": "Only the left hind foot is visible (measured at x 275-410, y 815-904). The right hind foot is mirrored."
+      },
+      {
+        "region": "tabby's right hind foot",
+        "visibility": "occluded",
+        "confidence": 0.3,
+        "inference": "Only the left hind foot is visible (x 665-745, y 790-848). The right is mirrored behind the right foreleg."
+      },
+      {
+        "region": "black cat's iris hue",
+        "visibility": "visible but lighting-contaminated",
+        "confidence": 0.6,
+        "inference": "Measured peak iris pixels are rgb(213,186,95)..(233,202,104): amber-yellow-green, hue about 50 degrees. Under the scene's strong warm key the de-lit hue is greener than the raw pixels read. The user describes both cats as green-eyed; the tabby measurably is (r approximately equal to g, hue about 60 degrees), the black cat is yellower."
+      },
+      {
+        "region": "back of both ears at their outer edge",
+        "visibility": "partially visible, rim-lit",
+        "confidence": 0.5,
+        "inference": "The outer ear reads as a blown warm rim (measured p90 rgb(106,68,45) on the black cat) because the ear is thin and backlit. Membrane thickness is inferred, not measured."
+      }
+    ],
+    "animalAnatomy": {
+      "applies": true,
+      "note": "Hand-authored quadruped body plan. This skill ships no creature/quadruped generator (verified by grep over forge/), so this block replaces the humanoid 'anatomy' block. The proportion unit is HL = head length, measured as skull-crown to chin-bottom in the reference: 250 px for the black cat, 288 px for the tabby.",
+      "bodyPlan": "quadruped-feline",
+      "proportionUnit": "HL (head length, crown to chin)",
+      "pose": {
+        "type": "upright-sit",
+        "evidence": "Both cats sit: forelegs vertical and separated, haunch resting on the seat, one hind foot flat and splayed laterally. Measured for the black cat: haunch/seat contact spans x 275-410 at y 890-904, forepaws contact at x 426-600, y 920-941. For the tabby: hind foot x 665-745 bottom y 848, forepaws x 749-836 bottom y 921 and x 861-920 bottom y 871.",
+        "blackCatYawDegrees": 8,
+        "tabbyYawDegrees": 26,
+        "yawEvidence": "The tabby's left flank is fully presented while its right foreleg's paw sits 50 px higher in the frame than its left (y 871 vs 921), so the right side recedes from camera; the black cat is nearly frontal, its left haunch only slightly forward."
+      },
+      "subjects": {
+        "black-cat": {
+          "headLengthPx": 250,
+          "headWidth": 1.06,
+          "earHeight": 0.55,
+          "earBaseWidth": 0.33,
+          "eyeDiameter": 0.26,
+          "interocular": 0.54,
+          "eyeLineFromCrown": 0.53,
+          "noseBaseFromCrown": 0.81,
+          "mouthLineFromCrown": 0.9,
+          "sitHeightCrownToPaw": 2.72,
+          "sitHeightEarTipToPaw": 3.12,
+          "shoulderWidth": 1.19,
+          "haunchWidth": 0.75,
+          "forelegLength": 0.95,
+          "chestDepthInferred": 0.9,
+          "tailLengthInferred": 2.4
+        },
+        "tabby-cat": {
+          "headLengthPx": 288,
+          "headWidth": 1.0,
+          "earHeight": 0.45,
+          "earBaseWidth": 0.38,
+          "eyeDiameter": 0.247,
+          "interocular": 0.465,
+          "eyeLineFromCrown": 0.51,
+          "noseBaseFromCrown": 0.78,
+          "mouthLineFromCrown": 0.88,
+          "sitHeightCrownToPaw": 2.36,
+          "sitHeightEarTipToPaw": 2.69,
+          "shoulderWidth": 1.18,
+          "haunchWidth": 0.8,
+          "forelegLength": 0.85,
+          "chestDepthInferred": 0.95,
+          "tailLengthInferred": 2.4
+        }
+      },
+      "stylization": "Both subjects are stylized, not anatomical: eye diameter is 0.25 HL where a live cat measures 0.16-0.18 HL, and head width is 1.00-1.06 HL where a live cat measures about 0.85 HL. The oversized eye and wide cheek ruff are the identity of this render style and must be preserved rather than 'corrected' toward real feline anatomy.",
+      "confidence": 0.72
+    },
+    "observationProtocol": {
+      "note": "grimoire/intake/image_analysis.md layers 1-8. Observation is separated from inference; every number is a pixel measurement from tools/probe.py or tools/sample.py against gatos.png (1402x1122), in 3D object-space terms.",
+      "layer1Identification": "Two domestic cats, stylized CGI, front-three-quarter view, sitting on a cream upholstered chair in grass under a warm low sun. Confidence 0.95.",
+      "layer2FormSilhouette": "Each cat is a lofted-ellipsoid torso topped by a near-spherical head, with two thin extruded-cone ears, two cylindrical forelegs and a rounded haunch. Bilateral symmetry per subject, broken by pose yaw. Organic shape language throughout; no flat or planar face anywhere except the ear membranes.",
+      "layer3Decomposition": "macro: two cat bodies (torso+haunch mass). meso: head, neck, 2 ears, 2 eyes, muzzle, nose, 2 forelegs, 2 forepaws, 1-2 hind feet, tail per cat. micro: ear-hair fringe, whisker set, toe grooves, stripe bands, corneal highlight, chest sheen band.",
+      "layer4SpatialRelationships": "<neck, attached-to, torso at shoulder socket>; <head, attached-to, neck, contactType socket>; <ear, embedded-in, skull dome, contactType embed>; <eye, embedded-in, orbit, contactType embed>; <foreleg, attached-to, shoulder, contactType socket>; <forepaw, butt-joined-to, foreleg distal end>; <hind foot, attached-to, haunch, contactType socket>; <tail, attached-to, pelvis rear socket, inferred>.",
+      "layer5MaterialsSurface": "Coat: dielectric, metalness 0, roughness 0.62-0.78 with an anisotropic sheen along hair direction; normal relief is fine directional strand grain. Ear membrane: thin dielectric, semi-translucent, transmission-driven warm glow when backlit. Eye: two-layer - a rough-free clearcoat cornea over a near-opaque iris/pupil; the pupil reflects the environment. Nose leather: dielectric, roughness 0.45, fine pebble relief. No metal anywhere.",
+      "layer6ColorFinish": "Measured medians: black coat lit rgb(60,49,41) to shadow rgb(14,13,13) - a warm brown-black, not neutral. Tabby base fur rgb(124,90,63), stripe rgb(41,23,9), flank base rgb(70,47,27). White bib rgb(240,207,169) and shaded white paw rgb(199,160,122) - both are white fur under a warm key, not cream albedo. Nose: black cat rgb(37,30,23), tabby rgb(150,85,47). Ear inner (backlit) rgb(207,148,96). Iris: black cat peak rgb(213,186,95), tabby peak rgb(203,185,104). Finish is satin throughout, gloss only on the cornea and the nose tip.",
+      "layer7IdentityFeatures": "The eyes are the identity: 0.25-HL diameter, a thin yellow-green (black cat) or chartreuse-green (tabby) iris annulus around a very large round dilated pupil, with one bright specular at the upper-right of each pupil and a dark greenish environment reflection band across it. Then: the tabby's forehead 'M' and eyeliner, its white bib inverted triangle and four white socks, the black cat's uniform coat with a warm rim-lit right edge, and both cats' long pale whiskers.",
+      "layer8Uncertainty": "Hidden: both tails, both backs, both bellies, two of four hind feet, the far side of every ear. Uncertain: iris hue under the heavy warm cast; ear membrane thickness; exact stripe count on the far flank. The single view cannot resolve any of these - see inferredRegions."
+    }
+  },
+  "qualityContract": {
+    "qualityBar": "ultra-complex",
+    "definitionOfDone": [
+      "From the reference camera, each cat's silhouette matches the hand-traced matte at IoU >= 0.85 with scale delta <= 0.08 and aspect delta <= 0.05, for the two cats together and with the correct left/right identity (black on the left, tabby on the right).",
+      "Both cats read as sitting quadrupeds from at least two camera angles, never as flat cards: the orbit views must not collapse in silhouette area.",
+      "The eyes are the identity feature and must survive review: 0.25-HL diameter, large round dilated pupil, thin yellow-green (black cat) / chartreuse-green (tabby) iris annulus, one upper-right corneal specular per eye.",
+      "Coat identity holds: the left cat is a uniform warm brown-black shorthair with a satin sheen; the right cat is a mackerel tabby with roughly 22 narrow dark flank stripes, a forehead 'M', dark eyeliner, a white inverted-triangle bib, a white muzzle/chin, and four white socks.",
+      "Ear membranes read as thin and translucent when backlit rather than as opaque cones.",
+      "Runtime is exposed and drivable: named pivots for head, both ears and the tail on each cat, plus root.userData.tick running a looping idle (breathing, periodic blink, tail sway) at a fixed timestep.",
+      "Every mesh is named, every specified component is built as its own mesh (no two components fused), and the model is both explodable and click-selectable under one shared definition of a part.",
+      "Regions the photo cannot show (both tails, backs, bellies, two hind feet) are reported as inferred with per-region confidence rather than presented as reconstructed evidence."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 5,
+      "mesoComponents": 16,
+      "microFeatureGroups": 8,
+      "materialLayers": 4,
+      "repetitionSystems": 2,
+      "reviewViewpoints": 5
+    },
+    "featureGroups": [
+      {
+        "id": "eye-stack-identity",
+        "name": "Eye stack: oversized round eye, dilated pupil, green iris annulus, corneal specular",
+        "required": true,
+        "qualityCriteria": [
+          "Eye diameter is 0.25 +/- 0.02 HL on both cats (measured 65 px / 250 px and 71 px / 288 px), not the 0.17 HL of real feline anatomy.",
+          "The pupil is round and dilated, filling 0.68-0.75 of the iris disc diameter, and is near-black rgb(16..21,15..18,7..10) with a cool environment-reflection band across its upper half rgb(19,35,49).",
+          "The iris is a thin annulus, not a disc: about 0.12 of eye diameter thick, yellow-green for the black cat (peak rgb(213,186,95)) and chartreuse-green for the tabby (peak rgb(203,185,104), r approximately equal to g).",
+          "A separate corneal layer carries one small bright specular highlight at the upper-right of each pupil, produced by the key light rather than painted into the albedo.",
+          "Interocular distance is 0.54 HL (black cat) and 0.465 HL (tabby), and the eye line sits at 0.51-0.53 HL below the crown."
+        ],
+        "evidenceRefs": [
+          "bc-eyes",
+          "tb-eyes",
+          "crops/bc-eyes.png",
+          "crops/tb-eyes.png"
+        ],
+        "failureModes": [
+          "iris drawn as a flat disc so no pupil ring is visible",
+          "pupil rendered as a slit or as a small dot, losing the dilated round-pupil look",
+          "specular baked into the iris albedo instead of coming from a clearcoat cornea and a real light",
+          "eyes shrunk toward real feline proportion, which destroys the stylized identity"
+        ]
+      },
+      {
+        "id": "tabby-agouti-pattern",
+        "name": "Mackerel tabby pattern: flank stripes, forehead M, eyeliner, white bib and socks",
+        "required": true,
+        "qualityCriteria": [
+          "About 22 narrow dark stripes run down the flank, following body curvature, 8-14 px wide at reference scale and spaced 18-25 px, with soft agouti-banded edges rather than hard vector lines.",
+          "Stripe albedo rgb(41,23,9) against a base coat rgb(124,90,63) on the lit forehead and rgb(70,47,27) on the shaded flank.",
+          "The forehead carries 5-6 narrow converging stripes (the tabby 'M') plus a dark ring of eyeliner around each eye and 2-3 short cheek bars.",
+          "The white bib is an inverted triangle from the chin to mid-chest with a soft, hair-interrupted boundary, and all four feet carry white socks starting mid-pastern.",
+          "White regions are white fur under a warm key (measured rgb(240,207,169) lit, rgb(199,160,122) shaded), so their albedo must be near-white and the warmth must come from the lighting, not the albedo."
+        ],
+        "evidenceRefs": [
+          "tb-flank",
+          "tb-bib",
+          "tb-paws",
+          "tb-ears"
+        ],
+        "failureModes": [
+          "stripes applied as a uniform grid instead of following the body's flow",
+          "bib boundary drawn as a hard geometric edge",
+          "white regions authored with cream albedo, so they turn orange once lit",
+          "stripes on the flank but a plain forehead, losing the 'M' that identifies a tabby"
+        ]
+      },
+      {
+        "id": "quadruped-sit-proportion",
+        "name": "Quadruped sitting proportion and posture in HL units",
+        "required": true,
+        "qualityCriteria": [
+          "Black cat: crown-to-forepaw 2.72 HL, ear-tip-to-forepaw 3.12 HL, head width 1.06 HL, shoulder width 1.19 HL, ear height 0.55 HL.",
+          "Tabby: crown-to-lowest-paw 2.36 HL, ear-tip 2.69 HL, head width 1.00 HL, shoulder width 1.18 HL, ear height 0.45 HL.",
+          "Both cats sit: forelegs vertical and separated, haunch in contact with the seat plane, one hind foot flat and splayed laterally, no standing belly gap.",
+          "Body yaw: black cat about 8 degrees, tabby about 26 degrees, so the tabby presents its left flank and its right forepaw projects about 50 px higher in frame."
+        ],
+        "evidenceRefs": [
+          "full-object",
+          "bc-paws",
+          "tb-paws"
+        ],
+        "failureModes": [
+          "cats modelled standing on four legs, which changes the whole silhouette",
+          "head sized to real feline proportion, losing the stylized big-head look",
+          "forelegs fused into one column so the gap between them disappears",
+          "haunch floating above the seat plane"
+        ]
+      },
+      {
+        "id": "coat-surface-response",
+        "name": "Coat surface response: directional fur grain, satin sheen, warm-black albedo",
+        "required": true,
+        "qualityCriteria": [
+          "Both coats are dielectric (metalness 0) with roughness 0.62-0.78 and an anisotropic sheen aligned with hair flow, not an isotropic plastic highlight.",
+          "The black coat's albedo is a warm brown-black, measured rgb(60,49,41) lit and rgb(14,13,13) in shadow: neutral #000000 is wrong and reads as a hole.",
+          "A brighter sheen band runs down the black cat's chest centreline where hair flow turns toward the key light.",
+          "Fur relief is present as fine directional strand grain in the normal/bump channel, independent of the albedo, plus cavity darkening where limbs meet the body.",
+          "The outer ear edge and the right-hand body edge carry a warm rim response (measured p90 rgb(106,68,45) on the black ear) driven by a real rim light."
+        ],
+        "evidenceRefs": [
+          "bc-chest",
+          "bc-haunch",
+          "tb-flank"
+        ],
+        "failureModes": [
+          "coat authored as pure black, so all form is lost in shadow",
+          "albedo texture reused as the roughness or normal map",
+          "isotropic specular that makes the fur read as latex",
+          "no cavity darkening, so the limbs look glued on"
+        ]
+      },
+      {
+        "id": "ear-and-whisker-microdetail",
+        "name": "Translucent ear membrane, backlit hair fringe, and whisker sets",
+        "required": true,
+        "qualityCriteria": [
+          "The ear is a thin shell, not a solid cone: the membrane transmits the key light so the inner ear glows warm (measured rgb(207,148,96)) with a darker outer rim line.",
+          "A fringe of long pale hairs runs along each ear's inner-front edge and breaks the ear silhouette.",
+          "Each cat carries 12-14 pale whiskers per cheek plus short brow whiskers, radiating from the whisker pads with a slight downward curve.",
+          "Whiskers are excluded from the silhouette matte and from the silhouette-gate render (a 1-2 px hair carries no silhouette information but does distort bbox metrics) and are scored on the material and lighting passes instead."
+        ],
+        "evidenceRefs": [
+          "tb-ears",
+          "bc-ears",
+          "bc-muzzle",
+          "tb-muzzle"
+        ],
+        "failureModes": [
+          "ears modelled as opaque solid cones with no transmission",
+          "ear inner surface painted pink instead of lit through",
+          "whiskers omitted entirely, or drawn as thick straight cylinders",
+          "whisker geometry left enabled during the silhouette gate, inflating the bounding box"
+        ]
+      }
+    ],
+    "visualDeltaChecks": [
+      "silhouette and negative-space delta",
+      "component hierarchy depth delta",
+      "repetition density and distribution delta",
+      "material albedo/roughness/normal response delta",
+      "local feature placement and scale delta"
+    ],
+    "antiShallowSpecRules": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md)."
+    ]
+  },
+  "authoringInstruction": "Fill observed object class, complexity reasoning, featureGroups, visualDeltaChecks, and unknowns before generating or implementing ObjectSculptSpec.",
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "Two Stylized Cats on a Chair (black shorthair + brown mackerel tabby) quadruped body plan proportions subsurface scattering ear membrane socket pivot runtime hierarchy idle animation measurement source proportions relative reference dimension",
+    "index": {
+      "status": "hit",
+      "reason": "current",
+      "fingerprint": "6857e5ab528b42ac12f4f411f862610a0bffce8e47aee3610a7603c318072fe8"
+    },
+    "matches": [
+      {
+        "record_id": "core.measurement-source-text",
+        "file_path": "grimoire/intake/image_analysis.md",
+        "heading": "Layer 2 — Overall form & silhouette",
+        "key_path": null,
+        "score": 26.932344469752,
+        "snippets": [
+          "Record proportions relative to a named reference dimension and keep observations separate from inference."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/intake/image_analysis.md",
+            "heading": "Layer 2 — Overall form & silhouette",
+            "key_path": null
+          },
+          {
+            "path": "grimoire/intake/image_analysis.md",
+            "heading": "The Rule",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/intake/image_analysis.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.socket-pivot",
+        "file_path": "grimoire/glossary/3d_vocabulary.md",
+        "heading": "Animation, Physics, And Destruction",
+        "key_path": null,
+        "score": 19.089318717095,
+        "snippets": [
+          "A pivot is a local rotation origin; a socket is an attachment point for a child part. In a runtime hierarchy, a socket Object3D is a child of the relevant pivot."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/glossary/3d_vocabulary.md",
+            "heading": "Animation, Physics, And Destruction",
+            "key_path": null
+          },
+          {
+            "path": "grimoire/readiness/action_rigging.md",
+            "heading": "Hierarchy Pattern",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/readiness/action_rigging.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.runtime-hierarchy",
+        "file_path": "grimoire/readiness/action_rigging.md",
+        "heading": "Hierarchy Pattern",
+        "key_path": null,
+        "score": 14.282582063132,
+        "snippets": [
+          "An action-ready model uses a root, component pivot groups, visual meshes, sockets, collider metadata or proxies, and destruction-group metadata."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/readiness/action_rigging.md",
+            "heading": "Hierarchy Pattern",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/readiness/action_rigging.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      }
+    ]
+  }
+}

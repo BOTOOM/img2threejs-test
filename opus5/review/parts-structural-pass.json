@@ -1,0 +1,543 @@
+{
+  "model": "Stylized Cat Pair",
+  "pass": "structural-pass",
+  "parts": [
+    {
+      "name": "Black Shorthair Torso",
+      "kind": "part",
+      "module": "bc-torso",
+      "level": "macro",
+      "triangles": 960
+    },
+    {
+      "name": "Black Shorthair Neck",
+      "kind": "part",
+      "module": "bc-neck",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Foreleg Left",
+      "kind": "part",
+      "module": "bc-foreleg-left",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Foreleg Right",
+      "kind": "part",
+      "module": "bc-foreleg-right",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Haunch",
+      "kind": "part",
+      "module": "bc-haunch",
+      "level": "macro",
+      "triangles": 640
+    },
+    {
+      "name": "Black Shorthair Hind Foot Left",
+      "kind": "part",
+      "module": "bc-hindfoot-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Hind Foot Right",
+      "kind": "part",
+      "module": "bc-hindfoot-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Tail Segment 1",
+      "kind": "part",
+      "module": "bc-tail-segment-1",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Tail Segment 2",
+      "kind": "part",
+      "module": "bc-tail-segment-2",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Tail Segment 3",
+      "kind": "part",
+      "module": "bc-tail-segment-3",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Tail Segment 4",
+      "kind": "part",
+      "module": "bc-tail-segment-4",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Tail Segment 5",
+      "kind": "part",
+      "module": "bc-tail-segment-5",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Forepaw Left",
+      "kind": "part",
+      "module": "bc-forepaw-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "bc-forepaw-left-toes",
+      "kind": "part",
+      "module": "bc-forepaw-left-toes",
+      "level": "unknown",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Forepaw Right",
+      "kind": "part",
+      "module": "bc-forepaw-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "bc-forepaw-right-toes",
+      "kind": "part",
+      "module": "bc-forepaw-right-toes",
+      "level": "unknown",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Torso",
+      "kind": "part",
+      "module": "tb-torso",
+      "level": "macro",
+      "triangles": 960
+    },
+    {
+      "name": "Brown Mackerel Tabby Neck",
+      "kind": "part",
+      "module": "tb-neck",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Foreleg Left",
+      "kind": "part",
+      "module": "tb-foreleg-left",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Foreleg Right",
+      "kind": "part",
+      "module": "tb-foreleg-right",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Haunch",
+      "kind": "part",
+      "module": "tb-haunch",
+      "level": "macro",
+      "triangles": 640
+    },
+    {
+      "name": "Brown Mackerel Tabby Hind Foot Left",
+      "kind": "part",
+      "module": "tb-hindfoot-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Hind Foot Right",
+      "kind": "part",
+      "module": "tb-hindfoot-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Tail Segment 1",
+      "kind": "part",
+      "module": "tb-tail-segment-1",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Tail Segment 2",
+      "kind": "part",
+      "module": "tb-tail-segment-2",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Tail Segment 3",
+      "kind": "part",
+      "module": "tb-tail-segment-3",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Tail Segment 4",
+      "kind": "part",
+      "module": "tb-tail-segment-4",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Tail Segment 5",
+      "kind": "part",
+      "module": "tb-tail-segment-5",
+      "level": "meso",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Forepaw Left",
+      "kind": "part",
+      "module": "tb-forepaw-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "tb-forepaw-left-toes",
+      "kind": "part",
+      "module": "tb-forepaw-left-toes",
+      "level": "unknown",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Forepaw Right",
+      "kind": "part",
+      "module": "tb-forepaw-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "tb-forepaw-right-toes",
+      "kind": "part",
+      "module": "tb-forepaw-right-toes",
+      "level": "unknown",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Chest Bib",
+      "kind": "part",
+      "module": "tb-bib",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Head",
+      "kind": "part",
+      "module": "bc-head",
+      "level": "macro",
+      "triangles": 1056
+    },
+    {
+      "name": "Black Shorthair Ear Membrane Left",
+      "kind": "part",
+      "module": "bc-ear-left-membrane",
+      "level": "meso",
+      "triangles": 768
+    },
+    {
+      "name": "Black Shorthair Ear Membrane Right",
+      "kind": "part",
+      "module": "bc-ear-right-membrane",
+      "level": "meso",
+      "triangles": 768
+    },
+    {
+      "name": "Black Shorthair Muzzle",
+      "kind": "part",
+      "module": "bc-muzzle",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Chin",
+      "kind": "part",
+      "module": "bc-chin",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Nose Leather",
+      "kind": "part",
+      "module": "bc-nose",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Cheek Ruff Left",
+      "kind": "part",
+      "module": "bc-cheek-ruff-left",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Cheek Ruff Right",
+      "kind": "part",
+      "module": "bc-cheek-ruff-right",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Brow Ridge Left",
+      "kind": "part",
+      "module": "bc-brow-left",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Brow Ridge Right",
+      "kind": "part",
+      "module": "bc-brow-right",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Eyelid Rim Left",
+      "kind": "part",
+      "module": "bc-eye-left-lid-rim",
+      "level": "meso",
+      "triangles": 4608
+    },
+    {
+      "name": "Black Shorthair Eyelid Rim Right",
+      "kind": "part",
+      "module": "bc-eye-right-lid-rim",
+      "level": "meso",
+      "triangles": 4608
+    },
+    {
+      "name": "Black Shorthair Ear Left",
+      "kind": "part",
+      "module": "bc-ear-left",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Black Shorthair Ear Right",
+      "kind": "part",
+      "module": "bc-ear-right",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Black Shorthair Iris Left",
+      "kind": "part",
+      "module": "bc-eye-left-iris",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Pupil Left",
+      "kind": "part",
+      "module": "bc-eye-left-pupil",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Cornea Left",
+      "kind": "part",
+      "module": "bc-eye-left-cornea",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Iris Right",
+      "kind": "part",
+      "module": "bc-eye-right-iris",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Pupil Right",
+      "kind": "part",
+      "module": "bc-eye-right-pupil",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Cornea Right",
+      "kind": "part",
+      "module": "bc-eye-right-cornea",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Head",
+      "kind": "part",
+      "module": "tb-head",
+      "level": "macro",
+      "triangles": 1056
+    },
+    {
+      "name": "Brown Mackerel Tabby Ear Membrane Left",
+      "kind": "part",
+      "module": "tb-ear-left-membrane",
+      "level": "meso",
+      "triangles": 768
+    },
+    {
+      "name": "Brown Mackerel Tabby Ear Membrane Right",
+      "kind": "part",
+      "module": "tb-ear-right-membrane",
+      "level": "meso",
+      "triangles": 768
+    },
+    {
+      "name": "Brown Mackerel Tabby Muzzle",
+      "kind": "part",
+      "module": "tb-muzzle",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Chin",
+      "kind": "part",
+      "module": "tb-chin",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Nose Leather",
+      "kind": "part",
+      "module": "tb-nose",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Cheek Ruff Left",
+      "kind": "part",
+      "module": "tb-cheek-ruff-left",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Cheek Ruff Right",
+      "kind": "part",
+      "module": "tb-cheek-ruff-right",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Brow Ridge Left",
+      "kind": "part",
+      "module": "tb-brow-left",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Brow Ridge Right",
+      "kind": "part",
+      "module": "tb-brow-right",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Eyelid Rim Left",
+      "kind": "part",
+      "module": "tb-eye-left-lid-rim",
+      "level": "meso",
+      "triangles": 4608
+    },
+    {
+      "name": "Brown Mackerel Tabby Eyelid Rim Right",
+      "kind": "part",
+      "module": "tb-eye-right-lid-rim",
+      "level": "meso",
+      "triangles": 4608
+    },
+    {
+      "name": "Brown Mackerel Tabby Ear Left",
+      "kind": "part",
+      "module": "tb-ear-left",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Brown Mackerel Tabby Ear Right",
+      "kind": "part",
+      "module": "tb-ear-right",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Brown Mackerel Tabby Iris Left",
+      "kind": "part",
+      "module": "tb-eye-left-iris",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Pupil Left",
+      "kind": "part",
+      "module": "tb-eye-left-pupil",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Cornea Left",
+      "kind": "part",
+      "module": "tb-eye-left-cornea",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Iris Right",
+      "kind": "part",
+      "module": "tb-eye-right-iris",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Pupil Right",
+      "kind": "part",
+      "module": "tb-eye-right-pupil",
+      "level": "meso",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Cornea Right",
+      "kind": "part",
+      "module": "tb-eye-right-cornea",
+      "level": "meso",
+      "triangles": 4992
+    }
+  ],
+  "instancedClusters": [
+    {
+      "name": "bc-forepaw-left-toes",
+      "count": 8
+    },
+    {
+      "name": "bc-forepaw-right-toes",
+      "count": 8
+    },
+    {
+      "name": "tb-forepaw-left-toes",
+      "count": 8
+    },
+    {
+      "name": "tb-forepaw-right-toes",
+      "count": 8
+    }
+  ],
+  "unnamedMeshes": 0,
+  "integralMeshes": 0,
+  "runtime": {
+    "nodes": 70,
+    "meshes": 69,
+    "sockets": 20,
+    "hasTick": true
+  }
+}

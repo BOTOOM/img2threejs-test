@@ -1,0 +1,346 @@
+{
+  "targetName": "Two Stylized Quadruped Cats",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/gpt56sol/reference.png",
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "paired stylized feline creatures",
+      "primaryDomain": "object",
+      "creatureDomain": "animal",
+      "bodyPlan": "quadruped",
+      "formLanguage": [
+        "organic",
+        "character-like",
+        "soft-tissue volumes",
+        "bilateral symmetry per cat"
+      ],
+      "structureKind": [
+        "paired compound subjects",
+        "articulated quadruped hierarchy",
+        "repeated bilateral facial and limb modules"
+      ],
+      "motionPotential": [
+        "articulated head",
+        "articulated ears",
+        "bendable tail",
+        "facial blink",
+        "looping idle"
+      ],
+      "materialFamilies": [
+        "short fur",
+        "keratin-like claws",
+        "wet dielectric eyes",
+        "matte nose leather"
+      ],
+      "notes": "Use a custom quadruped body plan and body-unit proportions. primaryDomain remains object only to prevent the installed pipeline from auto-applying its humanoid template; animalAnatomy is authoritative."
+    },
+    "complexity": {
+      "tier": "ultra-complex",
+      "scores": {
+        "silhouetteComplexity": 3,
+        "componentCount": 3,
+        "hierarchyDepth": 3,
+        "repetitionDensity": 2,
+        "materialLayerCount": 3,
+        "localDetailDensity": 3,
+        "occlusionRisk": 3,
+        "actionReadinessNeed": 3
+      },
+      "estimatedCounts": {
+        "macroComponents": 9,
+        "mesoComponents": 34,
+        "microFeatureGroups": 28,
+        "materialLayers": 9,
+        "repetitionSystems": 5
+      },
+      "reasoning": [
+        "Two independently proportioned organic subjects require separate articulated hierarchies rather than mirrored copies.",
+        "Identity depends on repeated eye, whisker, paw-toe, and tabby-stripe systems plus localized white coat regions.",
+        "The requested head, ear, and tail pivots and looping breathing, blink, and tail motion require action-ready grouping.",
+        "Single-view occlusion is high: rear bodies, undersides, hidden legs, scapular contours, and both tails are partially or wholly inferred."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "ultra-complex",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "Separate macro body masses, meso articulated anatomy, and micro facial/coat systems are required to preserve the paired silhouette and the eye-led identity."
+    },
+    "unknownsToResolveBeforeImplementation": [
+      "The posterior surface, dorsal curvature, and rump contours of both cats are hidden by the frontal view and chair back; use conservative feline anatomy with confidence 0.45.",
+      "Both tails are occluded except for a dark curled mass near the black cat; infer taper, length, and resting curve with confidence 0.3.",
+      "The far-side hind legs and underside transitions are occluded; mirror visible joint placement with confidence 0.55.",
+      "Exact tabby markings on the hidden side are unknown; continue visible stripe rhythm without claiming exact placement, confidence 0.4.",
+      "No photoreal strand-level coat reconstruction is possible from one image; use stylized short-fur response and sparse silhouette tufts."
+    ],
+    "animalAnatomy": {
+      "applies": true,
+      "species": "domestic cat",
+      "bodyPlan": "quadruped",
+      "unitDefinition": "One body unit equals visible cranial length from forehead crown to chin.",
+      "blackCat": {
+        "headLengthBU": 1.0,
+        "headWidthBU": 0.86,
+        "visibleShoulderHeightBU": 2.25,
+        "torsoLengthBU": 1.75,
+        "chestWidthBU": 0.82,
+        "frontLegLengthBU": 1.35,
+        "eyeDiameterHeadWidthRatio": 0.25,
+        "pose": "upright seated with parallel forelegs and compact hindquarters"
+      },
+      "tabbyCat": {
+        "headLengthBU": 1.0,
+        "headWidthBU": 0.96,
+        "visibleShoulderHeightBU": 1.95,
+        "torsoLengthBU": 1.82,
+        "chestWidthBU": 0.98,
+        "frontLegLengthBU": 1.12,
+        "eyeDiameterHeadWidthRatio": 0.27,
+        "pose": "forward standing-crouch with forepaws separated and hindquarters behind"
+      },
+      "sharedLandmarks": {
+        "eyeLineFromChin": 0.62,
+        "eyeSpacingInEyeDiameters": 1.55,
+        "noseBaseFromChin": 0.28,
+        "mouthLineFromChin": 0.17,
+        "earHeightInHeadLengths": 0.62
+      },
+      "confidence": 0.82,
+      "note": "Front-visible proportions are observed; hidden posterior anatomy and tails remain inferred."
+    },
+    "detailInventory": {
+      "scanMethod": "grid-4x4 plus component interpretation",
+      "targetMinDetails": 16,
+      "note": "Each observed detail maps to a concrete component local feature or material local override in the final spec.",
+      "details": [
+        {"id": "black-eye-wetline-detail", "kind": "gloss", "description": "Low-roughness convex cornea and thin dark wetline around both black-cat eyes.", "region": {"x": 0.27, "y": 0.28, "width": 0.22, "height": 0.18, "units": "normalized"}, "scale": "micro", "affects": "materialSurface", "mapsTo": {"type": "component.localFeatures", "ref": "black-eye-wetline"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c1.png", "confidence": 0.96},
+        {"id": "black-round-pupil-detail", "kind": "contour", "description": "Large nearly round black pupil occupying most of each yellow-green iris.", "region": {"x": 0.28, "y": 0.29, "width": 0.2, "height": 0.15, "units": "normalized"}, "scale": "micro", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "black-round-pupil"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c1.png", "confidence": 0.98},
+        {"id": "black-iris-ring-detail", "kind": "linework", "description": "Yellow-green iris with olive outer ring and warm yellow inner transition.", "region": {"x": 0.28, "y": 0.29, "width": 0.2, "height": 0.15, "units": "normalized"}, "scale": "micro", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "black-iris-ring"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c1.png", "confidence": 0.94},
+        {"id": "black-ear-ridges-detail", "kind": "ridge", "description": "Fine curved inner-ear fur ridges over warm dark brown ear interiors.", "region": {"x": 0.25, "y": 0.1, "width": 0.25, "height": 0.2, "units": "normalized"}, "scale": "micro", "affects": "formDetail", "mapsTo": {"type": "component.localFeatures", "ref": "black-inner-ear-ridges"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r0c1.png", "confidence": 0.88},
+        {"id": "black-whisker-detail", "kind": "linework", "description": "Long pale whiskers fan laterally from both dark muzzle pads.", "region": {"x": 0.23, "y": 0.38, "width": 0.31, "height": 0.2, "units": "normalized"}, "scale": "micro", "affects": "silhouette", "mapsTo": {"type": "component.localFeatures", "ref": "black-whisker-fan"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c1.png", "confidence": 0.94},
+        {"id": "black-nose-gloss-detail", "kind": "gloss", "description": "Small charcoal triangular nose with soft specular highlight.", "region": {"x": 0.34, "y": 0.38, "width": 0.08, "height": 0.07, "units": "normalized"}, "scale": "micro", "affects": "materialSurface", "mapsTo": {"type": "material.localOverrides", "ref": "black-nose-gloss"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c1.png", "confidence": 0.91},
+        {"id": "black-coat-value-detail", "kind": "linework", "description": "Near-black short coat retains warm brown edge highlights and chest-direction fur flow.", "region": {"x": 0.27, "y": 0.46, "width": 0.25, "height": 0.31, "units": "normalized"}, "scale": "meso", "affects": "materialSurface", "mapsTo": {"type": "material.localOverrides", "ref": "black-coat-warm-rim"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r2c1.png", "confidence": 0.86},
+        {"id": "black-paw-toe-detail", "kind": "groove", "description": "Three shallow toe separations on each compact black forepaw.", "region": {"x": 0.28, "y": 0.76, "width": 0.2, "height": 0.13, "units": "normalized"}, "scale": "micro", "affects": "formDetail", "mapsTo": {"type": "component.localFeatures", "ref": "black-paw-toe-grooves"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r3c1.png", "confidence": 0.92},
+        {"id": "tabby-eye-wetline-detail", "kind": "gloss", "description": "Large convex corneas with dark wetline and bright compact highlights.", "region": {"x": 0.57, "y": 0.27, "width": 0.2, "height": 0.19, "units": "normalized"}, "scale": "micro", "affects": "materialSurface", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-eye-wetline"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.97},
+        {"id": "tabby-round-pupil-detail", "kind": "contour", "description": "Large round black pupils cover most of the yellow-green irises.", "region": {"x": 0.58, "y": 0.29, "width": 0.18, "height": 0.15, "units": "normalized"}, "scale": "micro", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-round-pupil"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.99},
+        {"id": "tabby-iris-ring-detail", "kind": "linework", "description": "Pale yellow-green iris transitions to olive near the outer limbal ring.", "region": {"x": 0.58, "y": 0.29, "width": 0.18, "height": 0.15, "units": "normalized"}, "scale": "micro", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-iris-ring"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.95},
+        {"id": "tabby-forehead-m-detail", "kind": "linework", "description": "Dark branching M-like stripe system descends between the ears toward the brow.", "region": {"x": 0.57, "y": 0.18, "width": 0.2, "height": 0.14, "units": "normalized"}, "scale": "meso", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-forehead-m"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.96},
+        {"id": "tabby-cheek-stripe-detail", "kind": "linework", "description": "Three short dark curved cheek stripes on each side of the muzzle.", "region": {"x": 0.52, "y": 0.35, "width": 0.27, "height": 0.15, "units": "normalized"}, "scale": "micro", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-cheek-stripes"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.91},
+        {"id": "tabby-torso-stripe-detail", "kind": "linework", "description": "Dark curved horizontal stripes wrap the visible shoulder and flank over warm brown coat.", "region": {"x": 0.48, "y": 0.43, "width": 0.27, "height": 0.25, "units": "normalized"}, "scale": "meso", "affects": "materialSurface", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-torso-stripes"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r2c2.png", "confidence": 0.9},
+        {"id": "tabby-leg-stripe-detail", "kind": "linework", "description": "Alternating dark rings cross both warm-brown forelegs above white paws.", "region": {"x": 0.48, "y": 0.58, "width": 0.26, "height": 0.24, "units": "normalized"}, "scale": "meso", "affects": "materialSurface", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-leg-stripes"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r2c2.png", "confidence": 0.95},
+        {"id": "tabby-white-bib-detail", "kind": "contour", "description": "Large cream-white bib forms a tapered shield from chin across the upper chest.", "region": {"x": 0.55, "y": 0.41, "width": 0.2, "height": 0.23, "units": "normalized"}, "scale": "meso", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-white-bib"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r2c2.png", "confidence": 0.97},
+        {"id": "tabby-white-paw-detail", "kind": "contour", "description": "All visible paws terminate in cream-white sock regions with rounded toe masses.", "region": {"x": 0.48, "y": 0.69, "width": 0.25, "height": 0.15, "units": "normalized"}, "scale": "meso", "affects": "identity", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-white-paws"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r3c2.png", "confidence": 0.97},
+        {"id": "tabby-paw-toe-detail", "kind": "groove", "description": "Three shallow toe grooves divide each cream forepaw into rounded digits.", "region": {"x": 0.5, "y": 0.75, "width": 0.2, "height": 0.12, "units": "normalized"}, "scale": "micro", "affects": "formDetail", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-paw-toe-grooves"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r3c2.png", "confidence": 0.94},
+        {"id": "tabby-whisker-detail", "kind": "linework", "description": "Long white whiskers fan widely from both pale muzzle pads.", "region": {"x": 0.49, "y": 0.35, "width": 0.33, "height": 0.2, "units": "normalized"}, "scale": "micro", "affects": "silhouette", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-whisker-fan"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.96},
+        {"id": "tabby-nose-gloss-detail", "kind": "gloss", "description": "Warm pink-brown triangular nose has a low-roughness center and darker rim.", "region": {"x": 0.64, "y": 0.39, "width": 0.07, "height": 0.07, "units": "normalized"}, "scale": "micro", "affects": "materialSurface", "mapsTo": {"type": "material.localOverrides", "ref": "tabby-nose-gloss"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r1c2.png", "confidence": 0.94},
+        {"id": "tabby-inner-ear-detail", "kind": "ridge", "description": "Pale curved fur ridges layer over warm pink inner-ear surfaces.", "region": {"x": 0.55, "y": 0.1, "width": 0.25, "height": 0.2, "units": "normalized"}, "scale": "micro", "affects": "formDetail", "mapsTo": {"type": "component.localFeatures", "ref": "tabby-inner-ear-ridges"}, "evidenceRef": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r0c2.png", "confidence": 0.91}
+      ]
+    },
+    "anatomy": {
+      "applies": false,
+      "styleHeads": 0.0,
+      "proportions": {
+        "headUnit": 0.0,
+        "torso": 0.0,
+        "legs": 0.0,
+        "shoulderWidth": 0.0,
+        "hipWidth": 0.0
+      },
+      "pose": {
+        "type": "unassessed",
+        "jointAngles": {}
+      },
+      "faceLandmarks": {
+        "eyeLine": 0.0,
+        "eyeSpacing": 0.0,
+        "noseBase": 0.0,
+        "mouthLine": 0.0,
+        "hairline": 0.0
+      },
+      "features": [],
+      "confidence": 0.0,
+      "note": "Only meaningful when objectClass.primaryDomain is character or hybrid. Set applies=true and fill from forge/stage1_intake/extract_landmarks.py. See grimoire/character/reconstruction.md and grimoire/character/likeness_maximization.md."
+    },
+    "sourceImage": "/home/botom/devintest/arena/img2threejs/gpt56sol/reference.png"
+  },
+  "qualityContract": {
+    "qualityBar": "ultra-complex",
+    "definitionOfDone": [
+      "At the matched front-three-quarter view, the black cat reads taller and narrower while the tabby reads shorter, broader, and slightly forward.",
+      "Both faces preserve the reference's oversized yellow-green eyes with large round pupils, compact muzzles, triangular ears, and wide whisker fans.",
+      "The black cat retains a near-black satin short coat; the tabby retains warm brown dark striping, cream-white bib, muzzle, and paws.",
+      "Head, left/right ear, and tail pivots exist per cat; root.userData.tick loops breathing, blinking, and gentle tail motion deterministically.",
+      "Every visual pass has a rendered screenshot and an agent-approved comparison sheet before the next pass unlocks."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 5,
+      "mesoComponents": 16,
+      "microFeatureGroups": 8,
+      "materialLayers": 4,
+      "repetitionSystems": 2,
+      "reviewViewpoints": 5
+    },
+    "featureGroups": [
+      {
+        "id": "paired-quadruped-silhouette",
+        "name": "Paired quadruped silhouette and body-unit proportions",
+        "required": true,
+        "qualityCriteria": ["Black cat remains taller/narrower; tabby remains shorter/broader and forward without interpenetration."],
+        "evidenceRefs": ["full-object", "body-region"],
+        "failureModes": ["cats become identical copies", "pose reads as humanoid or bipedal", "forepaws float above the support plane"]
+      },
+      {
+        "id": "oversized-eye-system",
+        "name": "Oversized green eye and round pupil system",
+        "required": true,
+        "qualityCriteria": ["Each eye pair preserves eye diameter/head-width ratios, yellow-green irises, large round pupils, convex corneas, and wetline rims."],
+        "evidenceRefs": ["black-face", "tabby-face"],
+        "failureModes": ["vertical slit pupils", "small generic eyes", "flat decals without corneal volume"]
+      },
+      {
+        "id": "feline-face-structure",
+        "name": "Feline muzzle, nose, ear, and whisker structure",
+        "required": true,
+        "qualityCriteria": ["Triangular nose, bilateral muzzle pads, chin, articulated triangular ears, and curved whisker fans remain attached to each head pivot."],
+        "evidenceRefs": ["black-face", "tabby-face", "ear-region"],
+        "failureModes": ["human facial layout", "floating ears or whiskers", "muzzle collapses into a single sphere"]
+      },
+      {
+        "id": "coat-identity",
+        "name": "Black coat and tabby-white coat identity",
+        "required": true,
+        "qualityCriteria": ["Black coat keeps near-black warm-rim response; tabby keeps forehead M, cheek/torso/leg stripes, white bib, muzzle, and white paws."],
+        "evidenceRefs": ["black-body", "tabby-body", "tabby-paws"],
+        "failureModes": ["flat gray black cat", "tabby pattern becomes random spots", "white bib or white paws omitted"]
+      },
+      {
+        "id": "quadruped-runtime",
+        "name": "Quadruped pivots, attachments, and looping idle",
+        "required": true,
+        "qualityCriteria": ["Every leg and tail has a complete attachment contract; head, ears, and tail are named pivots; tick drives breathing, blink, and tail sway without cumulative drift."],
+        "evidenceRefs": ["full-object"],
+        "failureModes": ["humanoid rig substituted", "limbs detach under animation", "tick accumulates transforms or stops looping"]
+      }
+    ],
+    "visualDeltaChecks": [
+      "paired outer silhouette, seated/standing pose, and inter-cat negative-space delta",
+      "black-to-tabby head width, shoulder height, chest width, and foreleg length body-unit delta",
+      "eye diameter, eye spacing, iris hue, pupil roundness, and corneal protrusion delta",
+      "tabby forehead, cheek, torso, and foreleg stripe placement plus white bib/paw region delta",
+      "head/ear/tail pivot placement and attachment continuity across front and two orbit views",
+      "near-black versus warm-brown/cream coat albedo and roughness response under neutral and reference lighting"
+    ],
+    "antiShallowSpecRules": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md)."
+    ]
+  },
+  "authoringInstruction": "Fill observed object class, complexity reasoning, featureGroups, visualDeltaChecks, and unknowns before generating or implementing ObjectSculptSpec.",
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "Two Stylized Quadruped Cats quadruped feline body-unit proportions articulated head ears tail blink idle procedural fur tabby stripes whiskers PBR",
+    "index": {
+      "status": "hit",
+      "reason": "current",
+      "fingerprint": "6857e5ab528b42ac12f4f411f862610a0bffce8e47aee3610a7603c318072fe8"
+    },
+    "matches": [
+      {
+        "record_id": "core.pbr-hand-painted-vs-pbr-texture",
+        "file_path": "docs/raw/img2threejs-skill-dataset.json",
+        "heading": null,
+        "key_path": "categories.material_pbr[12]",
+        "score": 7.294208015119,
+        "snippets": [
+          "Distinguishes textures with lighting baked directly into color (static, stylized) from textures that respond dynamically to scene lighting via separate PBR channels. Phân biệt kết cấu có ánh sáng được nướng trực tiếp vào màu (tĩnh, cách điệu) ..."
+        ],
+        "source_refs": [
+          {
+            "path": "docs/raw/img2threejs-skill-dataset.json",
+            "heading": null,
+            "key_path": "categories.material_pbr[12]"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "docs/raw/img2threejs-skill-dataset.json",
+            "note": "img2threejs NotebookLM research distillation"
+          }
+        ]
+      },
+      {
+        "record_id": "core.shader-mapping-tsl-node-functions-for-weathering",
+        "file_path": "docs/raw/img2threejs-skill-dataset.json",
+        "heading": null,
+        "key_path": "categories.rendering_shader_mapping[2]",
+        "score": 5.600664943641,
+        "snippets": [
+          "Three.js Shading Language (WebGPU) node-graph functions used to build procedural PBR materials, especially for blending pristine vs. weathered states. Các hàm đồ thị nút của Three.js Shading Language (WebGPU) dùng để xây dựng vật liệu PBR thủ ..."
+        ],
+        "source_refs": [
+          {
+            "path": "docs/raw/img2threejs-skill-dataset.json",
+            "heading": null,
+            "key_path": "categories.rendering_shader_mapping[2]"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "docs/raw/img2threejs-skill-dataset.json",
+            "note": "img2threejs NotebookLM research distillation"
+          }
+        ]
+      },
+      {
+        "record_id": "core.measurement-source-text",
+        "file_path": "grimoire/intake/image_analysis.md",
+        "heading": "Layer 2 — Overall form & silhouette",
+        "key_path": null,
+        "score": 5.268490296339,
+        "snippets": [
+          "Record proportions relative to a named reference dimension and keep observations separate from inference."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/intake/image_analysis.md",
+            "heading": "Layer 2 — Overall form & silhouette",
+            "key_path": null
+          },
+          {
+            "path": "grimoire/intake/image_analysis.md",
+            "heading": "The Rule",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/intake/image_analysis.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      }
+    ]
+  }
+}

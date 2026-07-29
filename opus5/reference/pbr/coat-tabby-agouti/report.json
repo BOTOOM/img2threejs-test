@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.829,
+  "estimatedFidelity": 0.829,
+  "targetThreshold": 0.7,
+  "materialId": "coat-tabby-agouti",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-flank.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/coat-tabby-agouti",
+  "palette": [
+    "#231509",
+    "#3F2916",
+    "#634424",
+    "#8E6941",
+    "#B79876"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/coat-tabby-agouti/coat-tabby-agouti_albedo.png",
+      "url": "coat-tabby-agouti_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/coat-tabby-agouti/coat-tabby-agouti_roughness.png",
+      "url": "coat-tabby-agouti_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/coat-tabby-agouti/coat-tabby-agouti_height.png",
+      "url": "coat-tabby-agouti_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/coat-tabby-agouti/coat-tabby-agouti_normal.png",
+      "url": "coat-tabby-agouti_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/coat-tabby-agouti/coat-tabby-agouti_ao.png",
+      "url": "coat-tabby-agouti_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 240,
+    "sourceHeight": 280,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 280
+    },
+    "mask": {
+      "backgroundColor": "#75553D",
+      "backgroundNoise": 93.536,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.9977
+    },
+    "mapStats": {
+      "valueRange": 0.5491,
+      "heightP90Gradient": 0.02928,
+      "roughnessBase": 0.702,
+      "roughnessVariation": 0.055,
+      "normalStrength": 0.191,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#231509",
+      "#3F2916",
+      "#634424",
+      "#8E6941",
+      "#B79876"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

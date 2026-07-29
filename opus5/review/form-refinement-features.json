@@ -1,0 +1,10 @@
+[
+  {"id": "quadruped-sit-proportion", "score": 0.85,
+   "notes": "IoU 0.9066 against the traced matte, scale delta 0.0092, aspect delta 0.0093, and the four orbit views hold at area ratios 0.941 / 0.939 / 0.905 with the thickness axis at 0.551 - real volume from every angle. Both cats still read as sitting. Same residual as the previous pass: the head profile runs about 3 percent wider than the measured 287 px because it carries the cheek ruff in-profile."},
+  {"id": "eye-stack-geometry", "score": 0.86,
+   "notes": "The dilated pupil is now visible, which it was not before: it had been seated 0.10 diameters proud of the iris with a 0.30-diameter z-radius, reaching only 0.40 diameters against the iris sphere's 0.50, so it was entirely buried. It now sits 0.30 diameters proud and reads as a large round near-black disc inside a green annulus, with the cornea pushed to 0.16 diameters and z-scale 1.10 so it still covers the pupil. The lid rim is a real orbit rim rather than a mask - the first attempt scaled the torus to 2.05 eye-diameters, giving an outer diameter of 2.4 and rendering as raccoon goggles."},
+  {"id": "ear-membrane-translucency", "score": 0.70,
+   "notes": "Membranes read as warm-lit inner ears distinct from the opaque outer ear, with transmission 0.55 (tabby) and 0.38 (black) and their own env intensity. Held at 0.70 because the membrane edge is still a hard geometric rim rather than the reference's soft hair-broken boundary, and the radial ear fringe is a full rosette rather than an edge fringe - the repetition emitter only distributes instances over a whole circle."},
+  {"id": "whisker-and-muzzle-microdetail", "score": 0.72,
+   "notes": "Seven tapered whiskers per cheek per cat, rooted in the whisker pads and reading as strands rather than tubes; nose leather present on both cats with the pink/near-black split correct. Held at 0.72 because the reference shows 12-14 whiskers per cheek against 7 authored, the whiskers are straight rather than gently curved, and the brow whiskers are not modelled at all."}
+]

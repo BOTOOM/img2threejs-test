@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.829,
+  "estimatedFidelity": 0.829,
+  "targetThreshold": 0.7,
+  "materialId": "pupil-black",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/crops/mat-pupil.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/pupil-black",
+  "palette": [
+    "#110F08",
+    "#16242F",
+    "#A09A6C",
+    "#070704",
+    "#2C3B45"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/pupil-black/pupil-black_albedo.png",
+      "url": "pupil-black_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/pupil-black/pupil-black_roughness.png",
+      "url": "pupil-black_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/pupil-black/pupil-black_height.png",
+      "url": "pupil-black_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/pupil-black/pupil-black_normal.png",
+      "url": "pupil-black_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/pupil-black/pupil-black_ao.png",
+      "url": "pupil-black_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 204,
+    "sourceHeight": 228,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 204,
+      "height": 228
+    },
+    "mask": {
+      "backgroundColor": "#848255",
+      "backgroundNoise": 104.298,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.9389
+    },
+    "mapStats": {
+      "valueRange": 0.6128,
+      "heightP90Gradient": 0.02131,
+      "roughnessBase": 0.685,
+      "roughnessVariation": 0.05,
+      "normalStrength": 0.181,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#110F08",
+      "#16242F",
+      "#A09A6C",
+      "#070704",
+      "#2C3B45"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

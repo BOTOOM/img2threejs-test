@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.8,
+  "estimatedFidelity": 0.8,
+  "targetThreshold": 0.7,
+  "materialId": "black-fur",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/gpt56sol/detail-inventory/zones/zone-r2c1.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/gpt56sol/pbr/black-fur",
+  "palette": [
+    "#0F0B08",
+    "#1C130B",
+    "#060402",
+    "#2D2218",
+    "#64503E"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/gpt56sol/pbr/black-fur/black-fur_albedo.png",
+      "url": "black-fur_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/gpt56sol/pbr/black-fur/black-fur_roughness.png",
+      "url": "black-fur_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/gpt56sol/pbr/black-fur/black-fur_height.png",
+      "url": "black-fur_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/gpt56sol/pbr/black-fur/black-fur_normal.png",
+      "url": "black-fur_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/gpt56sol/pbr/black-fur/black-fur_ao.png",
+      "url": "black-fur_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 350,
+    "sourceHeight": 280,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 350,
+      "height": 280
+    },
+    "mask": {
+      "backgroundColor": "#271C18",
+      "backgroundNoise": 51.981,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.8767
+    },
+    "mapStats": {
+      "valueRange": 0.1517,
+      "heightP90Gradient": 0.0405,
+      "roughnessBase": 0.713,
+      "roughnessVariation": 0.074,
+      "normalStrength": 0.204,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#0F0B08",
+      "#1C130B",
+      "#060402",
+      "#2D2218",
+      "#64503E"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped",
+    "low value range weakens height/roughness inference"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

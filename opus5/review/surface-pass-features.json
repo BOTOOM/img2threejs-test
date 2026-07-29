@@ -1,0 +1,4 @@
+[
+  {"id": "coat-identity-split", "score": 0.81,
+   "notes": "Colour identity unchanged and still gated: per-part delta-E max 14.47. Relief raised - tangent normal strength 0.85 to 1.25, scale 1.6 to 2.4, bump amplitude 0.008 to 0.014, meso band amplitude 0.26 to 0.40 and micro 0.12 to 0.26, cavity AO 0.75 to 0.92 - so grazing light now breaks the highlight at strand scale instead of sliding across a turned surface. Still 0.81 rather than higher because the grain direction is inherited from the extracted reference crop's own orientation rather than being driven by an authored hair-flow field, so on the head and paws it runs the wrong way."}
+]

@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.829,
+  "estimatedFidelity": 0.829,
+  "targetThreshold": 0.7,
+  "materialId": "ear-membrane-warm",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-ears.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/ear-membrane-warm",
+  "palette": [
+    "#DFC0A5",
+    "#C6AB94",
+    "#8B6141",
+    "#BF885B",
+    "#563A25"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/ear-membrane-warm/ear-membrane-warm_albedo.png",
+      "url": "ear-membrane-warm_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/ear-membrane-warm/ear-membrane-warm_roughness.png",
+      "url": "ear-membrane-warm_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/ear-membrane-warm/ear-membrane-warm_height.png",
+      "url": "ear-membrane-warm_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/ear-membrane-warm/ear-membrane-warm_normal.png",
+      "url": "ear-membrane-warm_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/ear-membrane-warm/ear-membrane-warm_ao.png",
+      "url": "ear-membrane-warm_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 339,
+    "sourceHeight": 200,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 339,
+      "height": 200
+    },
+    "mask": {
+      "backgroundColor": "#B5A395",
+      "backgroundNoise": 54.342,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.9975
+    },
+    "mapStats": {
+      "valueRange": 0.5502,
+      "heightP90Gradient": 0.05072,
+      "roughnessBase": 0.699,
+      "roughnessVariation": 0.1,
+      "normalStrength": 0.216,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#DFC0A5",
+      "#C6AB94",
+      "#8B6141",
+      "#BF885B",
+      "#563A25"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

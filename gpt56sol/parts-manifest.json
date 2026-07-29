@@ -1,0 +1,453 @@
+{
+  "model": "two-stylized-quadruped-cats",
+  "parts": [
+    {
+      "name": "root",
+      "kind": "part",
+      "module": "root",
+      "triangles": 0
+    },
+    {
+      "name": "black-cat",
+      "kind": "part",
+      "module": "root",
+      "triangles": 0
+    },
+    {
+      "name": "black-torso",
+      "kind": "part",
+      "module": "black-cat",
+      "triangles": 0
+    },
+    {
+      "name": "black-rump",
+      "kind": "part",
+      "module": "black-cat",
+      "triangles": 0
+    },
+    {
+      "name": "black-chest",
+      "kind": "part",
+      "module": "black-torso",
+      "triangles": 0
+    },
+    {
+      "name": "black-neck",
+      "kind": "part",
+      "module": "black-torso",
+      "triangles": 0
+    },
+    {
+      "name": "black-head",
+      "kind": "part",
+      "module": "black-neck",
+      "triangles": 0
+    },
+    {
+      "name": "black-ear-l",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-inner-ear-l",
+      "kind": "part",
+      "module": "black-ear-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-ear-r",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-inner-ear-r",
+      "kind": "part",
+      "module": "black-ear-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-eye-l",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-iris-l",
+      "kind": "part",
+      "module": "black-eye-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-pupil-l",
+      "kind": "part",
+      "module": "black-iris-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-cornea-l",
+      "kind": "part",
+      "module": "black-eye-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-eye-r",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-iris-r",
+      "kind": "part",
+      "module": "black-eye-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-pupil-r",
+      "kind": "part",
+      "module": "black-iris-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-cornea-r",
+      "kind": "part",
+      "module": "black-eye-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-muzzle-l",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-whiskers-l",
+      "kind": "part",
+      "module": "black-muzzle-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-muzzle-r",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-whiskers-r",
+      "kind": "part",
+      "module": "black-muzzle-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-nose",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-chin",
+      "kind": "part",
+      "module": "black-head",
+      "triangles": 0
+    },
+    {
+      "name": "black-front-leg-l",
+      "kind": "part",
+      "module": "black-torso",
+      "triangles": 0
+    },
+    {
+      "name": "black-front-paw-l",
+      "kind": "part",
+      "module": "black-front-leg-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-hind-leg-l",
+      "kind": "part",
+      "module": "black-rump",
+      "triangles": 0
+    },
+    {
+      "name": "black-hind-paw-l",
+      "kind": "part",
+      "module": "black-hind-leg-l",
+      "triangles": 0
+    },
+    {
+      "name": "black-front-leg-r",
+      "kind": "part",
+      "module": "black-torso",
+      "triangles": 0
+    },
+    {
+      "name": "black-front-paw-r",
+      "kind": "part",
+      "module": "black-front-leg-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-hind-leg-r",
+      "kind": "part",
+      "module": "black-rump",
+      "triangles": 0
+    },
+    {
+      "name": "black-hind-paw-r",
+      "kind": "part",
+      "module": "black-hind-leg-r",
+      "triangles": 0
+    },
+    {
+      "name": "black-tail",
+      "kind": "part",
+      "module": "black-rump",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-cat",
+      "kind": "part",
+      "module": "root",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-torso",
+      "kind": "part",
+      "module": "tabby-cat",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-rump",
+      "kind": "part",
+      "module": "tabby-cat",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-chest",
+      "kind": "part",
+      "module": "tabby-torso",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-bib",
+      "kind": "part",
+      "module": "tabby-chest",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-neck",
+      "kind": "part",
+      "module": "tabby-torso",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-head",
+      "kind": "part",
+      "module": "tabby-neck",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-ear-l",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-inner-ear-l",
+      "kind": "part",
+      "module": "tabby-ear-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-ear-r",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-inner-ear-r",
+      "kind": "part",
+      "module": "tabby-ear-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-eye-l",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-iris-l",
+      "kind": "part",
+      "module": "tabby-eye-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-pupil-l",
+      "kind": "part",
+      "module": "tabby-iris-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-cornea-l",
+      "kind": "part",
+      "module": "tabby-eye-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-eye-r",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-iris-r",
+      "kind": "part",
+      "module": "tabby-eye-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-pupil-r",
+      "kind": "part",
+      "module": "tabby-iris-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-cornea-r",
+      "kind": "part",
+      "module": "tabby-eye-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-muzzle-l",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-whiskers-l",
+      "kind": "part",
+      "module": "tabby-muzzle-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-muzzle-r",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-whiskers-r",
+      "kind": "part",
+      "module": "tabby-muzzle-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-nose",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-chin",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-front-leg-l",
+      "kind": "part",
+      "module": "tabby-torso",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-front-paw-l",
+      "kind": "part",
+      "module": "tabby-front-leg-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-hind-leg-l",
+      "kind": "part",
+      "module": "tabby-rump",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-hind-paw-l",
+      "kind": "part",
+      "module": "tabby-hind-leg-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-front-leg-r",
+      "kind": "part",
+      "module": "tabby-torso",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-front-paw-r",
+      "kind": "part",
+      "module": "tabby-front-leg-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-hind-leg-r",
+      "kind": "part",
+      "module": "tabby-rump",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-hind-paw-r",
+      "kind": "part",
+      "module": "tabby-hind-leg-r",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-tail",
+      "kind": "part",
+      "module": "tabby-rump",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-forehead-stripes",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-cheek-stripes-l",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-cheek-stripes-r",
+      "kind": "part",
+      "module": "tabby-head",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-torso-stripe-system",
+      "kind": "part",
+      "module": "tabby-torso",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-leg-stripe-system-l",
+      "kind": "part",
+      "module": "tabby-front-leg-l",
+      "triangles": 0
+    },
+    {
+      "name": "tabby-leg-stripe-system-r",
+      "kind": "part",
+      "module": "tabby-front-leg-r",
+      "triangles": 0
+    }
+  ],
+  "unnamedMeshes": 0,
+  "integralMeshes": 147,
+  "runtimePartCount": 74,
+  "runtimeSource": "runtime-report.json"
+}

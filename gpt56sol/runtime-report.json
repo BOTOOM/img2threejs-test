@@ -1,0 +1,23 @@
+{
+  "bodyPlan": "quadruped",
+  "partCount": 74,
+  "meshCount": 147,
+  "socketCount": 74,
+  "colliderCount": 125,
+  "requiredPivotsPresent": true,
+  "tickChangesPose": true,
+  "tickIsIdempotent": true,
+  "explodeChangesLayout": true,
+  "pickingSharesPartDefinition": true,
+  "requiredPivots": [
+    "black-head",
+    "black-ear-l",
+    "black-ear-r",
+    "black-tail",
+    "tabby-head",
+    "tabby-ear-l",
+    "tabby-ear-r",
+    "tabby-tail"
+  ],
+  "source": "browser runtime=1 DOM report"
+}

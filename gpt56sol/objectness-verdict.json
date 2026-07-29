@@ -1,0 +1,11 @@
+{
+  "matchesDeclaredClass": true,
+  "confidence": 0.99,
+  "detectedClass": "two stylized domestic cats with a quadruped body plan",
+  "provider": "agent-vision",
+  "evidenceRefs": [
+    "reference.png#full-object",
+    "detail-inventory/zones/zone-r1c1.png#black-face",
+    "detail-inventory/zones/zone-r1c2.png#tabby-face"
+  ]
+}

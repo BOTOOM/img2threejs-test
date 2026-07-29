@@ -1,0 +1,7 @@
+[
+  {
+    "id": "quadruped-sit-proportion",
+    "score": 0.86,
+    "notes": "Measured, not eyeballed. Silhouette IoU against the traced matte is 0.9084 with scale delta 0.0184 and aspect delta 0.0002. Both subjects read as sitting quadrupeds: haunch mass in contact with the seat plane, one flat hind foot splayed laterally per cat, two separated vertical forelegs with visible background between them. Left/right identity is correct - the narrower taller mass is on the left, the broader tabby on the right. Held back from a higher score by two residual proportion errors visible in review/blockout-silhouette-diff.png: the tabby's head sits slightly right and high of where the reference puts it over its chest, and the black cat's right ear is about 8 percent small."
+  }
+]

@@ -1,0 +1,6 @@
+.claude
+node_modules
+.npm-cache
+.chrome-*
+.chrome
+.cache

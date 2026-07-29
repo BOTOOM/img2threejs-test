@@ -1,0 +1,5 @@
+[
+  {"id":"paired-quadruped-silhouette","score":0.81,"visible":true,"notes":"Paired height, width, stance, and black-versus-tabby body-unit differences remain aligned."},
+  {"id":"oversized-eye-system","score":0.84,"visible":true,"notes":"Eye centers, spacing, and diameter now align at structural level; iris, round pupil, cornea, and wetline are intentionally deferred to form/material."},
+  {"id":"feline-face-structure","score":0.80,"visible":true,"notes":"Separate head, ear, muzzle, nose, chin, and neck parts read as feline after reducing muzzle pads; ear curvature and whiskers remain deferred."}
+]

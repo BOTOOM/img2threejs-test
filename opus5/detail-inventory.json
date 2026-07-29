@@ -1,0 +1,251 @@
+{
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/gatos.png",
+  "zonesDir": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones",
+  "detailInventory": {
+    "scanMethod": "component-zones",
+    "targetMinDetails": 16,
+    "details": [
+      {
+        "id": "bc-ears",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.246,
+          "y": 0.134,
+          "width": 0.235,
+          "height": 0.169,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/bc-ears.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "bc-eyes",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.278,
+          "y": 0.303,
+          "width": 0.15,
+          "height": 0.089,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/bc-eyes.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "bc-muzzle",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.314,
+          "y": 0.374,
+          "width": 0.086,
+          "height": 0.089,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/bc-muzzle.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "bc-chest",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.235,
+          "y": 0.446,
+          "width": 0.207,
+          "height": 0.178,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/bc-chest.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "bc-haunch",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.171,
+          "y": 0.553,
+          "width": 0.114,
+          "height": 0.214,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/bc-haunch.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "bc-paws",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.214,
+          "y": 0.749,
+          "width": 0.228,
+          "height": 0.094,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/bc-paws.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "tb-ears",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.567,
+          "y": 0.125,
+          "width": 0.242,
+          "height": 0.178,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-ears.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "tb-eyes",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.592,
+          "y": 0.294,
+          "width": 0.153,
+          "height": 0.103,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-eyes.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "tb-muzzle",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.628,
+          "y": 0.379,
+          "width": 0.068,
+          "height": 0.098,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-muzzle.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "tb-bib",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.613,
+          "y": 0.464,
+          "width": 0.1,
+          "height": 0.143,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-bib.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "tb-flank",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.471,
+          "y": 0.428,
+          "width": 0.171,
+          "height": 0.25,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-flank.png",
+        "confidence": 0.0
+      },
+      {
+        "id": "tb-paws",
+        "kind": "",
+        "description": "",
+        "region": {
+          "x": 0.464,
+          "y": 0.695,
+          "width": 0.221,
+          "height": 0.129,
+          "units": "normalized"
+        },
+        "scale": "",
+        "affects": "",
+        "mapsTo": {
+          "type": "",
+          "ref": ""
+        },
+        "evidenceRef": "/home/botom/devintest/arena/img2threejs/opus5/crops/zones/tb-paws.png",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "authoringInstruction": "Open each zone crop under zonesDir and replace every detail stub's kind, description, scale, affects, mapsTo, and confidence with what is actually observed. Add more detail entries per zone if a single zone contains multiple distinct marks; do not leave stubs unfilled or unlinked (mapsTo must reference a real component.localFeatures or material.localOverrides entry)."
+}

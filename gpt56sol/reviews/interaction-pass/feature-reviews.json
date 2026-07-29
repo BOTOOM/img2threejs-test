@@ -1,0 +1,3 @@
+[
+  {"id":"quadruped-runtime","score":0.96,"visible":true,"notes":"Browser runtime reports 74 parts, 147 meshes, 74 sockets, 125 colliders, all eight required pivots, pose-changing and idempotent tick, center-scaled explode, and picking/partId agreement. Animated capture retains the approved silhouette."}
+]

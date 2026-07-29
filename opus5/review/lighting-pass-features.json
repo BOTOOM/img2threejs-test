@@ -1,0 +1,10 @@
+[
+  {"id": "eye-stack-identity", "score": 0.83,
+   "notes": "The corneal specular is now produced by a real key light placed from the reference's own evidence rather than by a generic preset, and it lands at the upper-right of all four pupils - which is what the reference shows in all four eyes and is the observation the key direction was solved from. Green annulus and large dilated pupil unchanged and measured."},
+  {"id": "coat-identity-split", "score": 0.82,
+   "notes": "Colour identity holds under the rebuilt rig: per-part delta-E max 16.73 against the 20 threshold. Both cats now carry the warm rim on their camera-right silhouette that the reference records (black-cat ear p90 rgb(106,68,45) against a rgb(60,49,41) body median), and the white bib no longer turns orange. Still 0.82: bib shape and stripe distribution are unchanged from material-pass."},
+  {"id": "ear-membrane-translucency", "score": 0.78,
+   "notes": "Now the strongest it has been: the back rim light passes through both membranes and the inner ears read warm and lit-through rather than painted. Held at 0.78 because the membrane edge is still a hard rim and the fringe is a rosette."},
+  {"id": "whisker-and-muzzle-microdetail", "score": 0.75,
+   "notes": "Whiskers pick up a rim highlight and separate from the coat instead of disappearing into it. Same under-count as before: 7 per cheek against 12-14, straight rather than curved."}
+]

@@ -1,0 +1,5 @@
+[
+  {"id":"oversized-eye-system","score":0.86,"visible":true,"notes":"Compact corneal highlights preserve the yellow-green rings and large round pupils."},
+  {"id":"coat-identity","score":0.80,"visible":true,"notes":"Key/fill balance keeps black coat, brown tabby, dark stripes, and cream regions distinguishable."},
+  {"id":"neutral-light-readability","score":0.72,"visible":true,"notes":"Contact shadows anchor paws and ACES avoids cream clipping; black-fur microstructure remains limited by procedural low-poly treatment."}
+]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stylized Cat Pair — review harness</title>
+    <style>
+      html, body { margin: 0; background: #14110e; color: #d9cfc2;
+                   font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+      #wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 8px; }
+      /* The canvas is locked to the evaluation resolution: the gates resize the
+         whole frame to a 224x224 grid, so the render must be framed exactly like
+         the reference matte crop (925x810). */
+      canvas { width: 925px; height: 810px; display: block;
+               background: repeating-conic-gradient(#2a2520 0% 25%, #221e1a 0% 50%) 50% / 24px 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="status">booting…</div>
+      <canvas id="view" width="925" height="810"></canvas>
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/node_modules/three/build/three.module.js",
+          "three/examples/jsm/": "/node_modules/three/examples/jsm/",
+          "three/addons/": "/node_modules/three/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="/build/viewer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+{
+  "model": "Stylized Cat Pair",
+  "pass": "blockout",
+  "parts": [
+    {
+      "name": "Black Shorthair Torso",
+      "kind": "part",
+      "module": "bc-torso",
+      "level": "macro",
+      "triangles": 960
+    },
+    {
+      "name": "Black Shorthair Foreleg Left",
+      "kind": "part",
+      "module": "bc-foreleg-left",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Foreleg Right",
+      "kind": "part",
+      "module": "bc-foreleg-right",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Black Shorthair Haunch",
+      "kind": "part",
+      "module": "bc-haunch",
+      "level": "macro",
+      "triangles": 640
+    },
+    {
+      "name": "Black Shorthair Hind Foot Left",
+      "kind": "part",
+      "module": "bc-hindfoot-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Hind Foot Right",
+      "kind": "part",
+      "module": "bc-hindfoot-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Forepaw Left",
+      "kind": "part",
+      "module": "bc-forepaw-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Forepaw Right",
+      "kind": "part",
+      "module": "bc-forepaw-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Torso",
+      "kind": "part",
+      "module": "tb-torso",
+      "level": "macro",
+      "triangles": 960
+    },
+    {
+      "name": "Brown Mackerel Tabby Foreleg Left",
+      "kind": "part",
+      "module": "tb-foreleg-left",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Foreleg Right",
+      "kind": "part",
+      "module": "tb-foreleg-right",
+      "level": "macro",
+      "triangles": 832
+    },
+    {
+      "name": "Brown Mackerel Tabby Haunch",
+      "kind": "part",
+      "module": "tb-haunch",
+      "level": "macro",
+      "triangles": 640
+    },
+    {
+      "name": "Brown Mackerel Tabby Hind Foot Left",
+      "kind": "part",
+      "module": "tb-hindfoot-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Hind Foot Right",
+      "kind": "part",
+      "module": "tb-hindfoot-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Forepaw Left",
+      "kind": "part",
+      "module": "tb-forepaw-left",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Brown Mackerel Tabby Forepaw Right",
+      "kind": "part",
+      "module": "tb-forepaw-right",
+      "level": "macro",
+      "triangles": 4992
+    },
+    {
+      "name": "Black Shorthair Head",
+      "kind": "part",
+      "module": "bc-head",
+      "level": "macro",
+      "triangles": 960
+    },
+    {
+      "name": "Black Shorthair Ear Left",
+      "kind": "part",
+      "module": "bc-ear-left",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Black Shorthair Ear Right",
+      "kind": "part",
+      "module": "bc-ear-right",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Brown Mackerel Tabby Head",
+      "kind": "part",
+      "module": "tb-head",
+      "level": "macro",
+      "triangles": 960
+    },
+    {
+      "name": "Brown Mackerel Tabby Ear Left",
+      "kind": "part",
+      "module": "tb-ear-left",
+      "level": "macro",
+      "triangles": 768
+    },
+    {
+      "name": "Brown Mackerel Tabby Ear Right",
+      "kind": "part",
+      "module": "tb-ear-right",
+      "level": "macro",
+      "triangles": 768
+    }
+  ],
+  "instancedClusters": [],
+  "unnamedMeshes": 0,
+  "integralMeshes": 0,
+  "runtime": {
+    "nodes": 23,
+    "meshes": 22,
+    "sockets": 20,
+    "hasTick": true
+  }
+}

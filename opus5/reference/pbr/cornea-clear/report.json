@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.829,
+  "estimatedFidelity": 0.829,
+  "targetThreshold": 0.7,
+  "materialId": "cornea-clear",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/crops/mat-cornea.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/cornea-clear",
+  "palette": [
+    "#1A150D",
+    "#D9C272",
+    "#0C0804",
+    "#2D2C26",
+    "#72612F"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/cornea-clear/cornea-clear_albedo.png",
+      "url": "cornea-clear_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/cornea-clear/cornea-clear_roughness.png",
+      "url": "cornea-clear_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/cornea-clear/cornea-clear_height.png",
+      "url": "cornea-clear_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/cornea-clear/cornea-clear_normal.png",
+      "url": "cornea-clear_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/cornea-clear/cornea-clear_ao.png",
+      "url": "cornea-clear_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 256,
+    "sourceHeight": 224,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 224
+    },
+    "mask": {
+      "backgroundColor": "#221A12",
+      "backgroundNoise": 20.224,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.9796
+    },
+    "mapStats": {
+      "valueRange": 0.7694,
+      "heightP90Gradient": 0.03259,
+      "roughnessBase": 0.693,
+      "roughnessVariation": 0.06,
+      "normalStrength": 0.194,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#1A150D",
+      "#D9C272",
+      "#0C0804",
+      "#2D2C26",
+      "#72612F"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

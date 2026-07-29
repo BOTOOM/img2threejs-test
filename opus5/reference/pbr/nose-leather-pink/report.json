@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.81,
+  "estimatedFidelity": 0.81,
+  "targetThreshold": 0.7,
+  "materialId": "nose-leather-pink",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/crops/mat-tb-nose.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/nose-leather-pink",
+  "palette": [
+    "#A26232",
+    "#724222",
+    "#EAC499",
+    "#311C0D",
+    "#BF8151"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/nose-leather-pink/nose-leather-pink_albedo.png",
+      "url": "nose-leather-pink_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/nose-leather-pink/nose-leather-pink_roughness.png",
+      "url": "nose-leather-pink_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/nose-leather-pink/nose-leather-pink_height.png",
+      "url": "nose-leather-pink_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/nose-leather-pink/nose-leather-pink_normal.png",
+      "url": "nose-leather-pink_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/nose-leather-pink/nose-leather-pink_ao.png",
+      "url": "nose-leather-pink_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 224,
+    "sourceHeight": 176,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 224,
+      "height": 176
+    },
+    "mask": {
+      "backgroundColor": "#D2AE88",
+      "backgroundNoise": 162.635,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 1.0
+    },
+    "mapStats": {
+      "valueRange": 0.7488,
+      "heightP90Gradient": 0.01697,
+      "roughnessBase": 0.692,
+      "roughnessVariation": 0.05,
+      "normalStrength": 0.176,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#A26232",
+      "#724222",
+      "#EAC499",
+      "#311C0D",
+      "#BF8151"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

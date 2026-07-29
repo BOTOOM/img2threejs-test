@@ -1,0 +1,17 @@
+[
+  {
+    "id": "quadruped-sit-proportion",
+    "score": 0.85,
+    "notes": "IoU held at 0.9053 while 47 meso parts were added, with scale delta 0.0092 and aspect delta 0.0093 - the sub-assemblies did not distort the macro proportions they were fitted into. Both cats still read as sitting. Slightly below the blockout score because the widened head profile (r 0.134 -> 0.148 black, 0.150 -> 0.170 tabby, needed to carry the cheek ruff) now runs about 3 percent wider than the measured 287 px head."
+  },
+  {
+    "id": "eye-stack-geometry",
+    "score": 0.84,
+    "notes": "Geometry only, which is what a map-stripped pass can evidence. All four eyes exist as four separable parts each - iris sphere, dilated pupil at 0.73 of iris diameter, clearcoat cornea, lid-rim torus - and every one now sits proud of the skull after switching from hand-fixed depths to depths derived from the head's lathe profile. Projected iris diameter is 57 px on the black cat and 58-62 px on the tabby against 57 px and 62 px measured, so the 0.25-head-length stylisation holds. Interocular spacing projects to 132 px against 134 px measured. Held at 0.84 because the tabby's left iris sits at 49 percent of head radius from the axis against 44 percent measured. The colour half of the eye identity is deliberately gated at material-pass instead, as eye-stack-identity: a grey clay dome cannot evidence a green annulus around a black pupil, and scoring it here would have been either dishonest or self-blocking."
+  },
+  {
+    "id": "ear-membrane-translucency",
+    "score": 0.66,
+    "notes": "Membranes are built as separate recessed shells inside each ear (scale 0.70/0.76/0.34 of the ear, 4 mm proud of the ear centre) and no longer poke a dark crescent outside the ear silhouette, which two earlier attempts did. Translucency itself is unevaluable in clay - it is a transmission response and needs material-pass plus the back rim light. Structure only, hence 0.66."
+  }
+]

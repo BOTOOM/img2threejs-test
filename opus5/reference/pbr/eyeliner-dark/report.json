@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.778,
+  "estimatedFidelity": 0.778,
+  "targetThreshold": 0.7,
+  "materialId": "eyeliner-dark",
+  "sourceImage": "/home/botom/devintest/arena/img2threejs/opus5/crops/mat-eyeliner.png",
+  "outDir": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/eyeliner-dark",
+  "palette": [
+    "#0E0B08",
+    "#080603",
+    "#1D1812",
+    "#4F4114",
+    "#777049"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/eyeliner-dark/eyeliner-dark_albedo.png",
+      "url": "eyeliner-dark_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/eyeliner-dark/eyeliner-dark_roughness.png",
+      "url": "eyeliner-dark_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/eyeliner-dark/eyeliner-dark_height.png",
+      "url": "eyeliner-dark_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/eyeliner-dark/eyeliner-dark_normal.png",
+      "url": "eyeliner-dark_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/botom/devintest/arena/img2threejs/opus5/reference/pbr/eyeliner-dark/eyeliner-dark_ao.png",
+      "url": "eyeliner-dark_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 360,
+    "sourceHeight": 130,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 130
+    },
+    "mask": {
+      "backgroundColor": "#120E0B",
+      "backgroundNoise": 12.369,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.9049
+    },
+    "mapStats": {
+      "valueRange": 0.3797,
+      "heightP90Gradient": 0.01607,
+      "roughnessBase": 0.687,
+      "roughnessVariation": 0.05,
+      "normalStrength": 0.175,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#0E0B08",
+      "#080603",
+      "#1D1812",
+      "#4F4114",
+      "#777049"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

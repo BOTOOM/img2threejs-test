@@ -1,0 +1,3 @@
+[
+  {"id":"quadruped-runtime","score":0.96,"visible":true,"notes":"Final build preserves all 74 parts, 147 meshes, 74 sockets, 125 colliders, eight required pivots, deterministic idle tick, centered explode, and shared picking part IDs."}
+]

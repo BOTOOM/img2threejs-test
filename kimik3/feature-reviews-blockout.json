@@ -1,0 +1,14 @@
+[
+  {
+    "id": "anatomy-proportion",
+    "score": 0.82,
+    "passed": true,
+    "notes": "Head/seated ratio corrected to ~0.38 (reference ~0.366) after headNode scale 0.88 + torso lengthening; per-cat width ~1.05 HU matches; pair spacing widened to match the reference pair bbox."
+  },
+  {
+    "id": "pose-silhouette",
+    "score": 0.84,
+    "passed": true,
+    "notes": "Both cats seated upright, black left / tabby right, tabby slightly behind with head lean toward the black cat; ear triangles and seat tail-curls present; Tier-1 clay IoU 0.938."
+  }
+]
