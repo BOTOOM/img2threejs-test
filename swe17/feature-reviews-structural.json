@@ -1,0 +1,37 @@
+[
+  {
+    "id": "overall-silhouette",
+    "score": 0.78,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Two seated cats, black left, tabby right, proportions and eye scale read as the reference."
+  },
+  {
+    "id": "primary-structure",
+    "score": 0.74,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Head, torso, legs, tail as separate groups; head/ear/tail pivots exposed."
+  },
+  {
+    "id": "eye-identity",
+    "score": 0.82,
+    "tier": "important",
+    "mustPass": false,
+    "notes": "Large green irises, round pupils, catchlights present."
+  },
+  {
+    "id": "coat-pattern-identity",
+    "score": 0.71,
+    "tier": "important",
+    "mustPass": false,
+    "notes": "Black cat solid; tabby has flank stripes, white chest and paws. Stripes are approximate."
+  },
+  {
+    "id": "attachment-joint-correctness",
+    "score": 0.76,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Limbs/tail rooted in torso; ears on head; no floating parts."
+  }
+]

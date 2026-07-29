@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown Chest Preview</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    #canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    #ui {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 10;
+      font-family: system-ui, sans-serif;
+      color: #333;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    input[type="range"] {
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <label>Lid open <input id="lidRange" type="range" min="0" max="60" value="0"></label>
+  </div>
+  <canvas id="canvas"></canvas>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { createCrownChestModel } from './src/createCrownChestModel.js';
+
+    const canvas = document.getElementById('canvas');
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+      powerPreference: 'high-performance',
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(512, 512, false);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    const envMap = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+    const scene = new THREE.Scene();
+    scene.environment = envMap;
+    scene.background = new THREE.Color(0xffffff);
+
+    const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+    // Front-left 3/4 view matching the reference.
+    camera.position.set(-1.05, 0.35, 2.70);
+    camera.lookAt(0, -0.10, 0);
+
+    const chest = createCrownChestModel();
+    scene.add(chest);
+
+    // Lighting
+    const hemi = new THREE.HemisphereLight(0xffffff, 0x222244, 0.7);
+    scene.add(hemi);
+
+    const key = new THREE.DirectionalLight(0xfff4e6, 5.0);
+    key.position.set(-2.0, 3.5, 1.5);
+    key.castShadow = true;
+    key.shadow.mapSize.set(2048, 2048);
+    key.shadow.bias = -0.0001;
+    scene.add(key);
+
+    const fill = new THREE.DirectionalLight(0xa8d8ff, 0.6);
+    fill.position.set(3.0, 2.0, 2.0);
+    scene.add(fill);
+
+    const rim = new THREE.DirectionalLight(0xffeeaa, 1.0);
+    rim.position.set(0, 3.5, -3.0);
+    scene.add(rim);
+
+    const ground = new THREE.Mesh(
+      new THREE.PlaneGeometry(10, 10),
+      new THREE.ShadowMaterial({ opacity: 0.15 })
+    );
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = -0.7;
+    ground.receiveShadow = true;
+    scene.add(ground);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.autoRotate = false;
+    controls.target.set(0, -0.05, 0);
+
+    if (window.location.search.includes('screenshot')) {
+      document.getElementById('ui').style.display = 'none';
+    }
+
+    const lidRange = document.getElementById('lidRange');
+    lidRange.addEventListener('input', () => {
+      const degrees = parseFloat(lidRange.value);
+      chest.userData.setLidOpen(degrees * Math.PI / 180);
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight, false);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+  </script>
+</body>
+</html>

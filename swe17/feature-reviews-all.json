@@ -1,0 +1,58 @@
+[
+  {
+    "id": "anatomy-proportion",
+    "score": 0.81,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Feline quadruped head-unit proportions: head ~0.43 seated height, pear torso, straight slim front legs, ~2.6 styleHeads."
+  },
+  {
+    "id": "pose-silhouette",
+    "score": 0.8,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Both cats seated upright side by side; black left, tabby right with slight inward yaws; ear triangles complete silhouette."
+  },
+  {
+    "id": "face-landmark-placement",
+    "score": 0.8,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Eye line, eye spacing, nose and mouth positions match stylized feline reference."
+  },
+  {
+    "id": "eye-identity-system",
+    "score": 0.83,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Chartreuse/pale-green radial irises, round pupils, white upper-left catchlights, clearcoat gloss."
+  },
+  {
+    "id": "coat-pattern-identity",
+    "score": 0.8,
+    "tier": "critical",
+    "mustPass": true,
+    "notes": "Black cat solid warm dark; tabby shows M, cheek fans, flank swirls, leg rings, white muzzle/chest/paws."
+  },
+  {
+    "id": "ear-and-inner-ear-detail",
+    "score": 0.72,
+    "tier": "important",
+    "mustPass": false,
+    "notes": "Tall rounded-triangle ears with dark auburn (black) and pink-fuzz (tabby) inner cones."
+  },
+  {
+    "id": "paw-toe-linework",
+    "score": 0.7,
+    "tier": "important",
+    "mustPass": false,
+    "notes": "Toe grooves on front paws; tabby paws are white socks under ringed legs."
+  },
+  {
+    "id": "idle-animation-liveliness",
+    "score": 0.76,
+    "tier": "important",
+    "mustPass": false,
+    "notes": "tick() drives subtle breathing, staggered blinks, tail sway and ear twitches."
+  }
+]
