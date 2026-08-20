@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crown Chest - Procedural Three.js</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: radial-gradient(circle at center, #2b2b55, #0a0a1a); }
+    #ui { position: absolute; top: 12px; left: 12px; color: #fff; font-family: sans-serif; z-index: 10; }
+    #ui button { margin: 4px 0; padding: 6px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <div><strong>Crown Chest</strong></div>
+    <button id="open">Open lid</button>
+    <button id="close">Close lid</button>
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js",
+        "three/addons/": "./node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+    import { createCrownChestModel } from './src/createCrownChestModel.js';
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a1a2e);
+
+    const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.01, 100);
+    // Reference-like front three-quarter view
+    camera.position.set(0.45, 0.32, 2.0);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 0.75;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    document.body.appendChild(renderer.domElement);
+
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    const roomEnv = new RoomEnvironment();
+    scene.environment = pmrem.fromScene(roomEnv).texture;
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(0, 0.38, 0);
+    controls.update();
+
+    const ambient = new THREE.AmbientLight(0xffffff, 0.35);
+    scene.add(ambient);
+
+    const key = new THREE.DirectionalLight(0xffffff, 1.4);
+    key.position.set(1.8, 2.5, 2.0);
+    key.castShadow = true;
+    key.shadow.mapSize.width = 1024;
+    key.shadow.mapSize.height = 1024;
+    scene.add(key);
+
+    const fill = new THREE.DirectionalLight(0x99aaff, 0.7);
+    fill.position.set(-1.5, 1.0, -1.0);
+    scene.add(fill);
+
+    const rim = new THREE.DirectionalLight(0xffddaa, 0.8);
+    rim.position.set(0, 1.5, -2.0);
+    scene.add(rim);
+
+    const chest = createCrownChestModel();
+    scene.add(chest);
+
+    // Ground plane for contact shadow
+    const ground = new THREE.Mesh(
+      new THREE.PlaneGeometry(10, 10),
+      new THREE.ShadowMaterial({ opacity: 0.25 })
+    );
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = 0;
+    ground.receiveShadow = true;
+    scene.add(ground);
+
+    let lidAngle = 0;
+    const lidPivot = chest.userData.sculptRuntime.lidPivot;
+
+    document.getElementById('open').addEventListener('click', () => {
+      lidAngle = Math.PI * 0.45;
+    });
+    document.getElementById('close').addEventListener('click', () => {
+      lidAngle = 0;
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      lidPivot.rotation.x = THREE.MathUtils.lerp(lidPivot.rotation.x, -lidAngle, 0.08);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>

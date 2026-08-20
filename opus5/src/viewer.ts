@@ -73,7 +73,12 @@ export class CatsHarness {
   lightingReport: Array<Record<string, unknown>> = [];
   private lightingInstalled = false;
 
-  constructor(canvas: HTMLCanvasElement, factory: FactoryModule, passId: string) {
+  constructor(
+    canvas: HTMLCanvasElement,
+    factory: FactoryModule,
+    passId: string,
+    qualityPriority: 'reference-fidelity' | 'balanced' = 'reference-fidelity',
+  ) {
     this.renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
@@ -98,7 +103,9 @@ export class CatsHarness {
     this.model = factory.createStylizedCatPairModel({
       castShadow: true,
       receiveShadow: true,
-      qualityPriority: 'reference-fidelity',
+      qualityPriority,
+      textureSize: qualityPriority === 'balanced' ? 512 : undefined,
+      textureAnisotropy: qualityPriority === 'balanced' ? 2 : undefined,
     });
     this.scene.add(this.model);
 
@@ -372,11 +379,20 @@ async function canvasToPng(canvas: HTMLCanvasElement): Promise<Blob> {
 export async function boot(): Promise<void> {
   const params = new URLSearchParams(window.location.search);
   const passId = params.get('pass') ?? 'blockout';
+  const liveMode = params.get('live') === '1';
+  const fastPass = ['blockout', 'structural', 'form-refinement'].includes(passId);
+  const qualityPriority = liveMode && fastPass ? 'balanced' : 'reference-fidelity';
   const canvas = document.getElementById('view') as HTMLCanvasElement;
   const status = document.getElementById('status') as HTMLElement;
 
-  const factory = (await import(`./generated/catsFactory.${passId}.js`)) as FactoryModule;
-  const harness = new CatsHarness(canvas, factory, passId);
+  const factoryPassId = {
+    material: 'material-pass',
+    surface: 'surface-pass',
+    structural: 'structural-pass',
+    lighting: 'lighting-pass',
+  }[passId] ?? passId;
+  const factory = (await import(`./generated/catsFactory.${factoryPassId}.js`)) as FactoryModule;
+  const harness = new CatsHarness(canvas, factory, passId, qualityPriority);
 
   const runtime = installCatsRuntime(harness.model);
 
@@ -432,7 +448,7 @@ export async function boot(): Promise<void> {
   // full materials, opaque background, orbit controls, and the idle loop running.
   // The default (no query param) stays a single deterministic frame, because that
   // is what the capture driver and the gates need.
-  if (params.get('live') === '1') {
+  if (liveMode) {
     const { OrbitControls } = await import(
       'three/examples/jsm/controls/OrbitControls.js'
     ) as { OrbitControls: new (camera: THREE.Camera, dom: HTMLElement) => {
@@ -457,7 +473,7 @@ export async function boot(): Promise<void> {
       requestAnimationFrame(loop);
     };
     loop();
-    status.textContent = `live pass=${passId} — drag to orbit, scroll to zoom `
+    status.textContent = `live pass=${passId} quality=${qualityPriority} — drag to orbit, scroll to zoom `
       + `(idle loop ${harness.model.userData.idleLoopSeconds}s, `
       + `${Object.keys(harness.model.userData.animationPivots ?? {}).length} pivots)`;
     (window as unknown as Record<string, unknown>).harnessReady = true;

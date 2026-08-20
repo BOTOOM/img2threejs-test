@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive GLB-guided crown chest reconstruction with reference comparison.">
+  <title>Crown Chest — GLB-guided</title>
+  <link rel="stylesheet" href="../../assets/showcase-shell.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-link" href="../../">← Atlas</a>
+    <div class="title-block"><h1>Crown Chest — GLB-guided</h1><p>GLB-guided reconstruction · interactive study</p></div>
+    <nav class="toolbar" aria-label="Scene controls">
+      <a class="control" href="glb-viewer.html">View source GLB</a>
+      <button class="control primary" id="launchBtn" type="button">Launch scene</button>
+      <button class="control" id="splitBtn" type="button" aria-pressed="false" disabled>Compare</button>
+      <button class="control" id="reloadBtn" type="button" disabled>Reload</button>
+    </nav>
+  </header>
+  <main class="workspace" id="workspace">
+    <section class="stage" aria-label="Interactive GLB-guided 3D scene">
+      <button class="reference-peek" id="referenceThumb" type="button" aria-label="Compare with the reference image">
+        <img src="ref.png" alt="Reference image of a crown chest">
+        <span>Reference · compare</span>
+      </button>
+      <div class="stage-empty" id="emptyState">
+        <div class="mark" aria-hidden="true">◇</div>
+        <h2>Interactive scene paused</h2>
+        <p>Launch the reconstructed chest, or open the source GLB in its dedicated viewer.</p>
+        <button class="control primary" id="launchEmptyBtn" type="button">Launch 3D scene</button>
+      </div>
+      <iframe class="demo-frame" id="demo" title="GLB-guided crown chest interactive 3D scene" loading="lazy" hidden allow="fullscreen"></iframe>
+      <p class="status" id="status" aria-live="polite" hidden></p>
+    </section>
+    <aside class="reference-panel" aria-label="Reference image">
+      <figure><img src="ref.png" alt="Reference image of a crown chest"><figcaption>Expectation · source image</figcaption></figure>
+    </aside>
+  </main>
+  <script src="../../assets/showcase-shell.js" defer></script>
+</body>
+</html>

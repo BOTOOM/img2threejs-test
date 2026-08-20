@@ -1,6 +1,96 @@
-.claude
-node_modules
-.npm-cache
-.chrome-*
-.chrome
-.cache
+# Operating system, editor, and agent files
+.claude/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and package-manager caches
+**/node_modules/
+.npm-cache/
+.pnpm-store/
+.yarn/cache/
+.yarn/install-state.gz
+
+# Nested repositories and local tooling state
+**/.git/
+.chrome/
+.chrome-*/
+.cache/
+**/.cache/
+.playwright/
+.playwright-cli/
+playwright-report/
+test-results/
+
+# Generated build output and source maps
+**/dist/
+**/build/
+**/.vite/
+**/coverage/
+**/__pycache__/
+**/*.map
+
+# Render and review artifacts generated during reconstruction
+**/renders/
+**/review/
+**/reviews/
+**/inspection/
+**/generated-passes/
+**/pipeline/
+showcase/scripts/
+showcase/reference/pbr/**/report.json
+showcase/experiments/**/comparison*.png
+showcase/experiments/cofre-glb-swe17/render-open.png
+*.log
+*.pid
+
+# Temporary and local exports
+**/tmp/
+*.tmp
+*.bak
+
+# Duplicate root-level source export; the published copy lives in showcase/
+/cofre.glb
+cofre-glb-swe17/comparison*.png
+cofre-glb-swe17/glb-render.png
+cofre-glb-swe17/*.png
+
+# Obsolete hashed chunks superseded by the current Opus showcase build
+showcase/experiments/opus5/assets/OrbitControls-BhF210Ia.js
+showcase/experiments/opus5/assets/UnrealBloomPass-Crr_amop.js
+showcase/experiments/opus5/assets/catsFactory.blockout-BpT1o1WU.js
+showcase/experiments/opus5/assets/catsFactory.form-refinement-ZWYAyIvE.js
+showcase/experiments/opus5/assets/catsFactory.interaction-pass-ajchCPJ_.js
+showcase/experiments/opus5/assets/catsFactory.lighting-pass-ajchCPJ_.js
+showcase/experiments/opus5/assets/catsFactory.material-pass-BpNviFZ6.js
+showcase/experiments/opus5/assets/catsFactory.structural-pass-DyvJW1Sa.js
+showcase/experiments/opus5/assets/catsFactory.surface-pass-ajchCPJ_.js
+showcase/experiments/opus5/assets/index-C7EFyYA5.js
+showcase/experiments/opus5/assets/OrbitControls-BI-Foj05.js
+showcase/experiments/opus5/assets/UnrealBloomPass-D4Ta_3Yc.js
+showcase/experiments/opus5/assets/catsFactory.blockout-BYNPXe6Y.js
+showcase/experiments/opus5/assets/catsFactory.form-refinement-CdvieagR.js
+showcase/experiments/opus5/assets/catsFactory.interaction-pass-BOq5aj1E.js
+showcase/experiments/opus5/assets/catsFactory.lighting-pass-BOq5aj1E.js
+showcase/experiments/opus5/assets/catsFactory.material-pass-BxwlGBwZ.js
+showcase/experiments/opus5/assets/catsFactory.structural-pass-lebF8_9V.js
+showcase/experiments/opus5/assets/catsFactory.surface-pass-BOq5aj1E.js
+showcase/experiments/opus5/assets/index-CWFT1cPZ.js
+showcase/experiments/opus5/assets/OrbitControls-CBVdBS9R.js
+showcase/experiments/opus5/assets/UnrealBloomPass-eImZUr0z.js
+showcase/experiments/opus5/assets/catsFactory.blockout-BpGb8BPy.js
+showcase/experiments/opus5/assets/catsFactory.form-refinement-BaR7NW8M.js
+showcase/experiments/opus5/assets/catsFactory.interaction-pass-Dx6A0VIN.js
+showcase/experiments/opus5/assets/catsFactory.lighting-pass-Dx6A0VIN.js
+showcase/experiments/opus5/assets/catsFactory.material-pass-Jxn4AilS.js
+showcase/experiments/opus5/assets/catsFactory.structural-pass-CYODaD-b.js
+showcase/experiments/opus5/assets/catsFactory.surface-pass-Dx6A0VIN.js
+showcase/experiments/opus5/assets/index-R3Qj5T0s.js
