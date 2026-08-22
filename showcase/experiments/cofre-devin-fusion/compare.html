@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Side-by-side comparator for the Cofre Devin Fusión study: reference image versus procedural render, and TRELLIS GLB versus procedural model.">
+  <title>Cofre Devin Fusión — Compare</title>
+  <link rel="stylesheet" href="../../assets/showcase-shell.css">
+  <style>
+    .compare-main { max-width: 1280px; margin: 0 auto; padding: 18px 22px 44px; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .panel[hidden] { display: none; }
+    .wipe { position: relative; overflow: hidden; width: min(100%, 62dvh); margin: 0 auto; border: 1px solid var(--line); border-radius: 14px; background: #000; aspect-ratio: 1 / 1; }
+    .wipe img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+    .wipe .top { clip-path: inset(0 0 0 var(--split, 50%)); }
+    .wipe-handle { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+    .wipe-rule { position: absolute; top: 0; bottom: 0; left: var(--split, 50%); width: 2px; background: var(--amber); pointer-events: none; }
+    .wipe-tag { position: absolute; bottom: 8px; padding: 3px 8px; border-radius: 7px; background: rgba(13,15,14,0.78); color: var(--ink); font-size: 0.62rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
+    .wipe-tag.left { left: 8px; }
+    .wipe-tag.right { right: 8px; }
+    .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .pair figure { margin: 0; }
+    .pair img { width: 100%; border: 1px solid var(--line); border-radius: 12px; }
+    .pair figcaption { margin-top: 7px; color: var(--muted); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .live { position: relative; height: min(70dvh, 640px); overflow: hidden; border: 1px solid var(--line); border-radius: 14px; }
+    .live iframe { width: 100%; height: 100%; border: 0; }
+    .note { max-width: 78ch; margin: 16px auto 0; color: var(--muted); font-size: 0.82rem; line-height: 1.6; }
+    @media (max-width: 720px) { .pair { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-link" href="./">← Study</a>
+    <div class="title-block"><h1>Cofre Devin Fusión — Compare</h1><p>Reference image vs result · TRELLIS GLB vs result</p></div>
+    <nav class="toolbar" aria-label="Comparison controls">
+      <button class="control primary" id="tabImage" type="button" aria-pressed="true">Image vs result</button>
+      <button class="control" id="tabGlb" type="button" aria-pressed="false">GLB vs result</button>
+    </nav>
+  </header>
+  <main class="compare-main">
+    <section class="panel" id="panelImage" aria-label="Reference image against the procedural render">
+      <div class="wipe" id="wipe">
+        <img src="ref-aligned.png" alt="Reference image of the crown chest, scaled to match the render">
+        <img class="top" id="wipeTop" src="render-aligned.png" alt="Procedural render of the crown chest, scaled to match the reference">
+        <div class="wipe-rule" id="wipeRule" aria-hidden="true"></div>
+        <span class="wipe-tag left">Reference</span>
+        <span class="wipe-tag right">Procedural result</span>
+        <input class="wipe-handle" id="wipeHandle" type="range" min="0" max="100" value="50" aria-label="Wipe between reference and result">
+      </div>
+      <div class="pair" style="margin-top:14px">
+        <figure><img src="ref.png" alt="Reference image of the crown chest"><figcaption>Reference image</figcaption></figure>
+        <figure><img src="render.png" alt="Procedural hero render"><figcaption>Procedural result · hero camera</figcaption></figure>
+      </div>
+      <p class="note">The wipe uses a subject-bbox alignment of both frames so the silhouettes can be read directly; the pair below is untouched. Tier-1 diagnosis on the hero view: silhouette IoU 0.8945, aspect-ratio delta 0.0205, scale delta 0.0024, bilateral symmetry error 0.0742.</p>
+    </section>
+    <section class="panel" id="panelGlb" hidden aria-label="TRELLIS GLB against the procedural model">
+      <div class="tabs">
+        <button class="control" data-mode="model" type="button" aria-pressed="true">Procedural</button>
+        <button class="control" data-mode="glb" type="button" aria-pressed="false">TRELLIS GLB</button>
+        <button class="control" data-mode="both" type="button" aria-pressed="false">Overlay</button>
+      </div>
+      <div class="live"><iframe id="liveFrame" title="Live comparison between the procedural chest and the TRELLIS GLB" src="demo.html?compare=glb&amp;mode=model" allow="fullscreen"></iframe></div>
+      <p class="note">The GLB is a single-material triangle soup produced by TRELLIS from the same reference image; it is height-matched and floor-aligned to the procedural model so the two silhouettes can be read against each other. It is a render baseline only — no geometry, topology or material from it is used by the procedural build.</p>
+    </section>
+  </main>
+  <script>
+    const wipe = document.getElementById('wipe');
+    const handle = document.getElementById('wipeHandle');
+    handle.addEventListener('input', () => { wipe.style.setProperty('--split', handle.value + '%'); });
+
+    const tabImage = document.getElementById('tabImage');
+    const tabGlb = document.getElementById('tabGlb');
+    const panelImage = document.getElementById('panelImage');
+    const panelGlb = document.getElementById('panelGlb');
+    const select = (glb) => {
+      panelImage.hidden = glb;
+      panelGlb.hidden = !glb;
+      tabImage.classList.toggle('primary', !glb);
+      tabGlb.classList.toggle('primary', glb);
+      tabImage.setAttribute('aria-pressed', String(!glb));
+      tabGlb.setAttribute('aria-pressed', String(glb));
+    };
+    tabImage.addEventListener('click', () => select(false));
+    tabGlb.addEventListener('click', () => select(true));
+
+    const frame = document.getElementById('liveFrame');
+    for (const button of document.querySelectorAll('[data-mode]')) {
+      button.addEventListener('click', () => {
+        for (const other of document.querySelectorAll('[data-mode]')) {
+          other.classList.remove('primary');
+          other.setAttribute('aria-pressed', 'false');
+        }
+        button.classList.add('primary');
+        button.setAttribute('aria-pressed', 'true');
+        const setMode = frame.contentWindow && frame.contentWindow.__CHEST_STUDY__;
+        if (setMode) setMode.setMode(button.dataset.mode);
+        else frame.src = 'demo.html?compare=glb&mode=' + button.dataset.mode;
+      });
+    }
+    document.querySelector('[data-mode="model"]').classList.add('primary');
+  </script>
+</body>
+</html>

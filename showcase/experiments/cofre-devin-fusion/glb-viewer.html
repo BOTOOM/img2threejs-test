@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive viewer for the TRELLIS-generated GLB baseline of the crown chest.">
+  <title>Cofre Devin Fusión — TRELLIS GLB</title>
+  <link rel="stylesheet" href="../../assets/showcase-shell.css">
+  <style>
+    .glb-workspace { display: block; }
+    .glb-stage { height: 100%; }
+    #canvas { display: block; width: 100%; height: 100%; }
+    .loading-card { position: absolute; inset: 50% auto auto 50%; z-index: 3; width: min(360px, calc(100% - 40px)); transform: translate(-50%, -50%); padding: 22px; border: 1px solid var(--line-strong); border-radius: 14px; background: rgba(21,24,22,0.94); box-shadow: 0 18px 44px rgba(0,0,0,0.35); text-align: center; }
+    .loading-card[hidden] { display: none; }
+    .loading-card h2 { margin: 0 0 8px; font-size: 1rem; }
+    .loading-card p { margin: 0; color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
+    .loading-line { height: 3px; margin-top: 18px; overflow: hidden; border-radius: 99px; background: rgba(229,179,90,0.18); }
+    .loading-line::after { display: block; width: 42%; height: 100%; border-radius: inherit; background: var(--amber); content: ""; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-link" href="./">← Study</a>
+    <div class="title-block"><h1>Cofre Devin Fusión — TRELLIS GLB</h1><p>Render baseline generated from the reference image · orbit to inspect</p></div>
+    <nav class="toolbar" aria-label="GLB viewer controls"><button class="control" id="resetBtn" type="button" disabled>Reset view</button></nav>
+  </header>
+  <main class="workspace glb-workspace">
+    <section class="stage glb-stage" aria-label="TRELLIS GLB 3D viewer">
+      <canvas id="canvas" aria-label="Interactive TRELLIS crown chest GLB"></canvas>
+      <div class="loading-card" id="loadingCard" role="status" aria-live="polite">
+        <h2>Loading TRELLIS GLB</h2><p>Preparing the image-to-mesh baseline for orbit inspection.</p><div class="loading-line" aria-hidden="true"></div>
+      </div>
+      <p class="status" id="status" aria-live="polite" hidden></p>
+    </section>
+  </main>
+  <script type="importmap">
+    {"imports":{"three":"https://unpkg.com/three@0.185.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.185.0/examples/jsm/"}}
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    const canvas = document.getElementById('canvas');
+    const stage = document.querySelector('.glb-stage');
+    const loadingCard = document.getElementById('loadingCard');
+    const status = document.getElementById('status');
+    const resetButton = document.getElementById('resetBtn');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1;
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0d0f0e);
+    const camera = new THREE.PerspectiveCamera(40, 1, 0.01, 100);
+    const initialPosition = new THREE.Vector3(1.05, 0.72, 1.85);
+    camera.position.copy(initialPosition);
+    const controls = new OrbitControls(camera, canvas);
+    controls.target.set(0, 0, 0);
+    controls.enableDamping = true;
+    controls.update();
+
+    scene.add(new THREE.HemisphereLight(0xf5f0e7, 0x171b19, 1.1));
+    const key = new THREE.DirectionalLight(0xfff4df, 2.2);
+    key.position.set(2, 3, 2);
+    scene.add(key);
+    const fill = new THREE.DirectionalLight(0x9aaea0, 0.7);
+    fill.position.set(-2, 1, -2);
+    scene.add(fill);
+
+    const resize = () => {
+      const width = Math.max(1, stage.clientWidth);
+      const height = Math.max(1, stage.clientHeight);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height, false);
+    };
+    new ResizeObserver(resize).observe(stage);
+    resize();
+
+    resetButton.addEventListener('click', () => {
+      camera.position.copy(initialPosition);
+      controls.target.set(0, 0, 0);
+      controls.update();
+    });
+
+    new GLTFLoader().load('cofre.glb', (gltf) => {
+      scene.add(gltf.scene);
+      loadingCard.hidden = true;
+      resetButton.disabled = false;
+      status.hidden = false;
+      status.textContent = 'TRELLIS GLB ready · drag to orbit · scroll to zoom';
+    }, undefined, (error) => {
+      loadingCard.hidden = true;
+      status.hidden = false;
+      status.dataset.state = 'error';
+      status.textContent = 'Could not load the TRELLIS GLB. Check the deployed asset path or network access.';
+      console.error('GLB loading failed', error);
+    });
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    };
+    animate();
+  </script>
+</body>
+</html>
