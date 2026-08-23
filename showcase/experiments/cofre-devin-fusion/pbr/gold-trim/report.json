@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.736,
+  "estimatedFidelity": 0.736,
+  "targetThreshold": 0.7,
+  "materialId": "gold-trim",
+  "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/gold-trim_x6.png",
+  "outDir": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim",
+  "palette": [
+    "#B8900A",
+    "#DDC151",
+    "#432D42",
+    "#6C5019",
+    "#9D876C"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_albedo.png",
+      "url": "/pbr/gold-trim/gold-trim_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_roughness.png",
+      "url": "/pbr/gold-trim/gold-trim_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_height.png",
+      "url": "/pbr/gold-trim/gold-trim_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_normal.png",
+      "url": "/pbr/gold-trim/gold-trim_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_ao.png",
+      "url": "/pbr/gold-trim/gold-trim_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 204,
+    "sourceHeight": 114,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 204,
+      "height": 114
+    },
+    "mask": {
+      "backgroundColor": "#452C09",
+      "backgroundNoise": 92.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.9932
+    },
+    "mapStats": {
+      "valueRange": 0.5809,
+      "heightP90Gradient": 0.00807,
+      "roughnessBase": 0.682,
+      "roughnessVariation": 0.05,
+      "normalStrength": 0.166,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#B8900A",
+      "#DDC151",
+      "#432D42",
+      "#6C5019",
+      "#9D876C"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped",
+    "low high-frequency detail weakens normal/roughness inference"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

@@ -25,11 +25,27 @@ watertight). No geometry, topology, UV or material from it feeds the procedural 
 model is built entirely from Three.js primitives in code. The GLB exists here so the recovered
 silhouette can be read against an independent image-to-mesh reconstruction.
 
+It did change one number. Body depth is the dimension a single three-quarter reference constrains
+worst, and the baseline reads the chest as much deeper than the first authored value, so the depth
+parameter was swept and rescored — against the reference image, not against the mesh. `D = 0.74`
+improved both at once (hero IoU 0.8945 → 0.9060, mean band error vs the baseline 0.186 → 0.138);
+deeper values kept closing on the baseline while losing reference fidelity and were rejected. The
+baseline was a second opinion on an inferred quantity, never a source of geometry.
+
 ## Fidelity
 
-Tier-1 render diagnosis on the hero view: silhouette IoU 0.8945, aspect-ratio delta 0.0205,
-scale delta 0.0024, bilateral symmetry error 0.0742, no failures. Eight orbit views were
+Tier-1 render diagnosis on the hero view: silhouette IoU 0.9060, aspect-ratio delta 0.0090,
+scale delta 0.0090, bilateral symmetry error 0.0740, no geometry failures. Eight orbit views were
 checked and none is degenerate.
+
+The same tool's per-part colour gate does fail (`delta-E 46.13 > 20.0`). Upstream documents it as
+comparing the render's overall dominant colour clusters against every component recipe rather than a
+cropped per-component region, so an object mixing dark lacquer with bright gold cannot satisfy it;
+the failure is recorded in the spec rather than hidden.
+
+Where the render still departs from the reference: the corner caps read as slabs instead of wrapping
+hardware (the TRELLIS baseline actually recovers that wrap better), the crown emblem's peaks are
+sharper and flatter than the painted crown, and the body colour is cleaner than the painterly source.
 
 ## Inferred regions
 

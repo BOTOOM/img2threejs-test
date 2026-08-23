@@ -1213,35 +1213,35 @@
           "points": [
             [
               -0.4475,
-              -0.3125
+              -0.3525
             ],
             [
               0.4475,
-              -0.3125
+              -0.3525
             ],
             [
               0.4825,
-              -0.2775
+              -0.3175
             ],
             [
               0.4825,
-              0.2775
+              0.3175
             ],
             [
               0.4475,
-              0.3125
+              0.3525
             ],
             [
               -0.4475,
-              0.3125
+              0.3525
             ],
             [
               -0.4825,
-              0.2775
+              0.3175
             ],
             [
               -0.4825,
-              -0.2775
+              -0.3175
             ]
           ],
           "depth": 0.522
@@ -1255,7 +1255,7 @@
       "dimensions": {
         "width": 0.965,
         "height": 0.522,
-        "depth": 0.625,
+        "depth": 0.705,
         "units": "relative",
         "confidence": 0.75
       },
@@ -1320,7 +1320,7 @@
             "id": "front-panel-mount",
             "localPosition": [
               0.0,
-              -0.3125,
+              -0.3525,
               0.24
             ],
             "localRotation": [
@@ -1333,7 +1333,7 @@
             "id": "rear-panel-mount",
             "localPosition": [
               0.0,
-              0.3125,
+              0.3525,
               0.24
             ],
             "localRotation": [
@@ -1398,7 +1398,7 @@
             "id": "hinge-mount",
             "localPosition": [
               0.0,
-              0.33,
+              0.37,
               0.593
             ],
             "localRotation": [
@@ -1532,15 +1532,15 @@
           "points": [
             [
               -0.518,
-              -0.756
+              -0.836
             ],
             [
               0.518,
-              -0.756
+              -0.836
             ],
             [
               0.548,
-              -0.726
+              -0.806
             ],
             [
               0.548,
@@ -1560,7 +1560,7 @@
             ],
             [
               -0.548,
-              -0.726
+              -0.806
             ]
           ],
           "depth": 0.045
@@ -1574,7 +1574,7 @@
       "dimensions": {
         "width": 1.096,
         "height": 0.045,
-        "depth": 0.756,
+        "depth": 0.836,
         "units": "relative",
         "confidence": 0.7
       },
@@ -1582,7 +1582,7 @@
         "position": [
           0.0,
           0.593,
-          -0.378
+          -0.418
         ],
         "rotation": [
           -1.570796,
@@ -1626,7 +1626,7 @@
             "id": "slope-front-mount",
             "localPosition": [
               0.0,
-              -0.756,
+              -0.836,
               0.067
             ],
             "localRotation": [
@@ -1652,7 +1652,7 @@
             "id": "slope-left-mount",
             "localPosition": [
               -0.548,
-              -0.378,
+              -0.418,
               0.067
             ],
             "localRotation": [
@@ -1665,7 +1665,7 @@
             "id": "slope-right-mount",
             "localPosition": [
               0.548,
-              -0.378,
+              -0.418,
               0.067
             ],
             "localRotation": [
@@ -1678,7 +1678,7 @@
             "id": "cap-front-left-mount",
             "localPosition": [
               -0.548,
-              -0.756,
+              -0.836,
               0.0
             ],
             "localRotation": [
@@ -1691,7 +1691,7 @@
             "id": "cap-front-right-mount",
             "localPosition": [
               0.548,
-              -0.756,
+              -0.836,
               0.0
             ],
             "localRotation": [
@@ -1906,12 +1906,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.0,
-          -0.756,
+          -0.836,
           0.045
         ],
         "localEnd": [
           0.0,
-          -0.756,
+          -0.836,
           0.045
         ],
         "contactNormal": [
@@ -1936,7 +1936,7 @@
       "transform": {
         "position": [
           0.0,
-          -0.712658,
+          -0.792658,
           0.020071
         ],
         "rotation": [
@@ -2298,19 +2298,19 @@
         "profile2D": {
           "points": [
             [
-              -0.38975,
+              -0.42975,
               -0.025
             ],
             [
-              0.38975,
+              0.42975,
               -0.025
             ],
             [
-              0.27825,
+              0.31825,
               0.21228
             ],
             [
-              -0.27825,
+              -0.31825,
               0.21228
             ]
           ],
@@ -2327,12 +2327,12 @@
         "contactType": "surface-mount",
         "localStart": [
           -0.548,
-          -0.378,
+          -0.418,
           0.045
         ],
         "localEnd": [
           -0.548,
-          -0.378,
+          -0.418,
           0.045
         ],
         "contactNormal": [
@@ -2348,7 +2348,7 @@
         ]
       },
       "dimensions": {
-        "width": 0.756,
+        "width": 0.836,
         "height": 0.1873,
         "depth": 0.05,
         "units": "relative",
@@ -2357,7 +2357,7 @@
       "transform": {
         "position": [
           -0.507152,
-          -0.378,
+          -0.418,
           0.016166
         ],
         "rotation": [
@@ -2504,19 +2504,19 @@
         "profile2D": {
           "points": [
             [
-              -0.38975,
+              -0.42975,
               -0.025
             ],
             [
-              0.38975,
+              0.42975,
               -0.025
             ],
             [
-              0.27825,
+              0.31825,
               0.21228
             ],
             [
-              -0.27825,
+              -0.31825,
               0.21228
             ]
           ],
@@ -2533,12 +2533,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.548,
-          -0.378,
+          -0.418,
           0.045
         ],
         "localEnd": [
           0.548,
-          -0.378,
+          -0.418,
           0.045
         ],
         "contactNormal": [
@@ -2554,7 +2554,7 @@
         ]
       },
       "dimensions": {
-        "width": 0.756,
+        "width": 0.836,
         "height": 0.1873,
         "depth": 0.05,
         "units": "relative",
@@ -2563,7 +2563,7 @@
       "transform": {
         "position": [
           0.507152,
-          -0.378,
+          -0.418,
           0.016166
         ],
         "rotation": [
@@ -2711,35 +2711,35 @@
           "points": [
             [
               -0.41,
-              -0.29
+              -0.33
             ],
             [
               0.41,
-              -0.29
+              -0.33
             ],
             [
               0.44,
-              -0.26
+              -0.3
             ],
             [
               0.44,
-              0.26
+              0.3
             ],
             [
               0.41,
-              0.29
+              0.33
             ],
             [
               -0.41,
-              0.29
+              0.33
             ],
             [
               -0.44,
-              0.26
+              0.3
             ],
             [
               -0.44,
-              -0.26
+              -0.3
             ]
           ],
           "depth": 0.057
@@ -2755,12 +2755,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.0,
-          -0.378,
+          -0.418,
           0.173
         ],
         "localEnd": [
           0.0,
-          -0.378,
+          -0.418,
           0.173
         ],
         "contactNormal": [
@@ -2778,14 +2778,14 @@
       "dimensions": {
         "width": 0.88,
         "height": 0.057,
-        "depth": 0.58,
+        "depth": 0.66,
         "units": "relative",
         "confidence": 0.65
       },
       "transform": {
         "position": [
           0.0,
-          -0.378,
+          -0.418,
           0.173
         ],
         "rotation": [
@@ -2949,35 +2949,35 @@
           "points": [
             [
               -0.47,
-              -0.33
+              -0.37
             ],
             [
               0.47,
-              -0.33
+              -0.37
             ],
             [
               0.5,
-              -0.3
+              -0.34
             ],
             [
               0.5,
-              0.3
+              0.34
             ],
             [
               0.47,
-              0.33
+              0.37
             ],
             [
               -0.47,
-              0.33
+              0.37
             ],
             [
               -0.5,
-              0.3
+              0.34
             ],
             [
               -0.5,
-              -0.3
+              -0.34
             ]
           ],
           "depth": 0.1
@@ -3016,7 +3016,7 @@
       "dimensions": {
         "width": 1.0,
         "height": 0.1,
-        "depth": 0.66,
+        "depth": 0.74,
         "units": "relative",
         "confidence": 0.7
       },
@@ -3180,35 +3180,35 @@
           "points": [
             [
               -0.4695,
-              -0.3275
+              -0.3675
             ],
             [
               0.4695,
-              -0.3275
+              -0.3675
             ],
             [
               0.4975,
-              -0.2995
+              -0.3395
             ],
             [
               0.4975,
-              0.2995
+              0.3395
             ],
             [
               0.4695,
-              0.3275
+              0.3675
             ],
             [
               -0.4695,
-              0.3275
+              0.3675
             ],
             [
               -0.4975,
-              0.2995
+              0.3395
             ],
             [
               -0.4975,
-              -0.2995
+              -0.3395
             ]
           ],
           "depth": 0.062
@@ -3247,7 +3247,7 @@
       "dimensions": {
         "width": 0.995,
         "height": 0.062,
-        "depth": 0.655,
+        "depth": 0.735,
         "units": "relative",
         "confidence": 0.65
       },
@@ -3411,35 +3411,35 @@
           "points": [
             [
               -0.4525,
-              -0.3025
+              -0.3425
             ],
             [
               0.4525,
-              -0.3025
+              -0.3425
             ],
             [
               0.4725,
-              -0.2825
+              -0.3225
             ],
             [
               0.4725,
-              0.2825
+              0.3225
             ],
             [
               0.4525,
-              0.3025
+              0.3425
             ],
             [
               -0.4525,
-              0.3025
+              0.3425
             ],
             [
               -0.4725,
-              0.2825
+              0.3225
             ],
             [
               -0.4725,
-              -0.2825
+              -0.3225
             ]
           ],
           "depth": 0.01
@@ -3478,7 +3478,7 @@
       "dimensions": {
         "width": 0.945,
         "height": 0.01,
-        "depth": 0.605,
+        "depth": 0.685,
         "units": "relative",
         "confidence": 0.6
       },
@@ -3639,12 +3639,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.0,
-          -0.3175,
+          -0.3575,
           0.335
         ],
         "localEnd": [
           0.0,
-          -0.3175,
+          -0.3575,
           0.335
         ],
         "contactNormal": [
@@ -3669,7 +3669,7 @@
       "transform": {
         "position": [
           0.0,
-          -0.3175,
+          -0.3575,
           0.335
         ],
         "rotation": [
@@ -3835,12 +3835,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.0,
-          0.3175,
+          0.3575,
           0.335
         ],
         "localEnd": [
           0.0,
-          0.3175,
+          0.3575,
           0.335
         ],
         "contactNormal": [
@@ -3865,7 +3865,7 @@
       "transform": {
         "position": [
           0.0,
-          0.3175,
+          0.3575,
           0.335
         ],
         "rotation": [
@@ -4372,12 +4372,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.0,
-          -0.3135,
+          -0.3535,
           0.335
         ],
         "localEnd": [
           0.0,
-          -0.3135,
+          -0.3535,
           0.335
         ],
         "contactNormal": [
@@ -4402,7 +4402,7 @@
       "transform": {
         "position": [
           0.0,
-          -0.3135,
+          -0.3535,
           0.335
         ],
         "rotation": [
@@ -4551,12 +4551,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.0,
-          0.3135,
+          0.3535,
           0.335
         ],
         "localEnd": [
           0.0,
-          0.3135,
+          0.3535,
           0.335
         ],
         "contactNormal": [
@@ -4581,7 +4581,7 @@
       "transform": {
         "position": [
           0.0,
-          0.3135,
+          0.3535,
           0.335
         ],
         "rotation": [
@@ -5125,12 +5125,12 @@
         "contactType": "surface-mount",
         "localStart": [
           -0.3875,
-          -0.23,
+          -0.27,
           0.0
         ],
         "localEnd": [
           -0.3875,
-          -0.23,
+          -0.27,
           0.0
         ],
         "contactNormal": [
@@ -5155,7 +5155,7 @@
       "transform": {
         "position": [
           -0.3875,
-          -0.23,
+          -0.27,
           0.0
         ],
         "rotation": [
@@ -5365,12 +5365,12 @@
         "contactType": "surface-mount",
         "localStart": [
           -0.435,
-          -0.6555,
+          -0.7355,
           -0.048
         ],
         "localEnd": [
           -0.435,
-          -0.6555,
+          -0.7355,
           -0.048
         ],
         "contactNormal": [
@@ -5395,7 +5395,7 @@
       "transform": {
         "position": [
           -0.435,
-          -0.6555,
+          -0.7355,
           -0.048
         ],
         "rotation": [
@@ -5606,12 +5606,12 @@
         "contactType": "surface-mount",
         "localStart": [
           -0.3875,
-          0.23,
+          0.27,
           -0.0
         ],
         "localEnd": [
           -0.3875,
-          0.23,
+          0.27,
           -0.0
         ],
         "contactNormal": [
@@ -5636,7 +5636,7 @@
       "transform": {
         "position": [
           -0.3875,
-          0.23,
+          0.27,
           -0.0
         ],
         "rotation": [
@@ -6069,12 +6069,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.3875,
-          -0.23,
+          -0.27,
           0.0
         ],
         "localEnd": [
           0.3875,
-          -0.23,
+          -0.27,
           0.0
         ],
         "contactNormal": [
@@ -6099,7 +6099,7 @@
       "transform": {
         "position": [
           0.3875,
-          -0.23,
+          -0.27,
           0.0
         ],
         "rotation": [
@@ -6300,12 +6300,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.435,
-          -0.6555,
+          -0.7355,
           -0.048
         ],
         "localEnd": [
           0.435,
-          -0.6555,
+          -0.7355,
           -0.048
         ],
         "contactNormal": [
@@ -6330,7 +6330,7 @@
       "transform": {
         "position": [
           0.435,
-          -0.6555,
+          -0.7355,
           -0.048
         ],
         "rotation": [
@@ -6532,12 +6532,12 @@
         "contactType": "surface-mount",
         "localStart": [
           0.3875,
-          0.23,
+          0.27,
           -0.0
         ],
         "localEnd": [
           0.3875,
-          0.23,
+          0.27,
           -0.0
         ],
         "contactNormal": [
@@ -6562,7 +6562,7 @@
       "transform": {
         "position": [
           0.3875,
-          0.23,
+          0.27,
           -0.0
         ],
         "rotation": [
@@ -14420,7 +14420,7 @@
         "key_path": "categories.material_pbr[5]",
         "score": 7.442528992367,
         "snippets": [
-          "Light transport property for opaque dielectrics where light penetrates and scatters internally before exiting (skin, wax, marble, some polymers). \u0110\u1eb7c t\u00ednh truy\u1ec1n \u00e1nh s\u00e1ng c\u1ee7a v\u1eadt li\u1ec7u \u0111i\u1ec7n m\u00f4i m\u1edd \u0111\u1ee5c, \u00e1nh s\u00e1ng xuy\u00ean v\u00e0o v\u00e0 t\u00e1n x\u1ea1 b\u00ean trong tr\u01b0\u1edbc ..."
+          "Light transport property for opaque dielectrics where light penetrates and scatters internally before exiting (skin, wax, marble, some polymers). Đặc tính truyền ánh sáng của vật liệu điện môi mờ đục, ánh sáng xuyên vào và tán xạ bên trong trước ..."
         ],
         "source_refs": [
           {
@@ -17209,6 +17209,244 @@
       "maskWarnings": [],
       "renderHash": "c758e4b029d98251",
       "passId": "form-refinement"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.906,
+        "aspectRatioDelta": 0.009,
+        "scaleDelta": 0.009,
+        "bilateralSymmetryError": 0.074,
+        "colorDelta": {
+          "checked": 54,
+          "maxDeltaE": 46.13,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.53
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 46.13
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 31.2
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.82
+            }
+          ],
+          "gated": true
+        }
+      },
+      "failures": [
+        "max per-part color delta-E 46.13 exceeds threshold 20.0"
+      ],
+      "maskWarnings": [],
+      "renderHash": "3ab10b16e5bc1dc0",
+      "passId": "optimization-pass"
     }
   ]
 }
