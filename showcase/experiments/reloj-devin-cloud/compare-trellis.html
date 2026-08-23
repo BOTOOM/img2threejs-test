@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Side-by-side comparison of the procedural reloj Devin cloud reconstruction against the TRELLIS reference mesh, from matched angles.">
+  <title>reloj Devin cloud — Procedural vs TRELLIS GLB</title>
+  <link rel="stylesheet" href="../../assets/showcase-shell.css">
+  <style>
+    .compare-workspace { display: block; padding-bottom: 0; }
+    .compare-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; height: 100%; }
+    .panel { position: relative; display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+    .panel h2 { margin: 0; padding: 11px 14px; border-bottom: 1px solid var(--line); font-size: 0.74rem; font-weight: 750; letter-spacing: 0.09em; text-transform: uppercase; }
+    .panel h2 span { display: block; margin-top: 5px; color: var(--quiet); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.02em; text-transform: none; }
+    .panel .body { position: relative; flex: 1; min-height: 0; }
+    .panel iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .panel .still { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--canvas); }
+    .note { max-width: 92ch; margin: 0; padding: 12px 2px 16px; color: var(--muted); font-size: 0.8rem; line-height: 1.55; }
+    .note strong { color: var(--ink); }
+    .angle-field { display: inline-flex; align-items: center; gap: 8px; color: var(--quiet); font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase; }
+    @media (max-width: 1000px) { .compare-grid { grid-template-columns: 1fr; height: auto; } .panel .body { height: 62vh; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-link" href="./">← Study</a>
+    <div class="title-block"><h1>Procedural vs TRELLIS GLB</h1><p>reloj Devin cloud · matched angles, same camera fit</p></div>
+    <nav class="toolbar" aria-label="Comparison controls">
+      <span class="angle-field"><label for="angleSelect">Azimuth</label>
+        <select class="pass-select" id="angleSelect">
+          <option value="0">0°</option>
+          <option value="45">45°</option>
+          <option value="90">90°</option>
+          <option value="120">120°</option>
+          <option value="180">180°</option>
+          <option value="270">270°</option>
+        </select>
+      </span>
+      <button class="control" id="shadeBtn" type="button" aria-pressed="true">Neutral shading</button>
+    </nav>
+  </header>
+  <main class="workspace compare-workspace">
+    <div class="compare-grid">
+      <section class="panel">
+        <h2>Reference image<span>The single frame both reconstructions were built from.</span></h2>
+        <div class="body"><img class="still" src="ref.png" alt="Reference photograph of Edward Elric's pocket watch"></div>
+      </section>
+      <section class="panel">
+        <h2>Procedural — reloj Devin cloud<span>Three.js primitives generated as TypeScript code by the img2threejs pipeline.</span></h2>
+        <div class="body"><iframe id="procFrame" title="Procedural reloj Devin cloud reconstruction" allow="fullscreen"></iframe></div>
+      </section>
+      <section class="panel">
+        <h2>TRELLIS GLB — baseline<span>Mesh produced by the TRELLIS image-to-3D model, not by this pipeline. Used only as a render baseline for comparison; none of its topology or materials were copied.</span></h2>
+        <div class="body"><iframe id="glbFrame" title="TRELLIS reference mesh" allow="fullscreen"></iframe></div>
+      </section>
+    </div>
+    <p class="note">The middle panel is <strong>generated code</strong>: Three.js primitives assembled from a sculpt spec, with semantic part names and procedural PBR materials. The right panel is the <strong>TRELLIS</strong> mesh (<code>trellis-community/TRELLIS</code>), a single untextured-hierarchy triangle soup — more organic in the central relief, but with no semantic structure. TRELLIS leaves <code>metallicFactor</code> at 1.0, which renders its baked albedo almost black, so this viewer neutralises metalness and computes vertex normals for a fair silhouette comparison. Both panels use the same camera fit, so the azimuth selector points both at the same angle.</p>
+  </main>
+  <script>
+    (() => {
+      const proc = document.getElementById('procFrame');
+      const glb = document.getElementById('glbFrame');
+      const angle = document.getElementById('angleSelect');
+      const shadeBtn = document.getElementById('shadeBtn');
+      let grey = true;
+
+      const load = () => {
+        const shade = grey ? 'grey' : 'albedo';
+        const azimuth = angle.value;
+        proc.src = `compare.html?which=proc&shade=${shade}&azimuth=${azimuth}`;
+        glb.src = `compare.html?which=glb&shade=${shade}&azimuth=${azimuth}`;
+      };
+
+      angle.addEventListener('change', load);
+      shadeBtn.addEventListener('click', () => {
+        grey = !grey;
+        shadeBtn.textContent = grey ? 'Neutral shading' : 'Albedo shading';
+        shadeBtn.setAttribute('aria-pressed', String(grey));
+        load();
+      });
+      load();
+    })();
+  </script>
+</body>
+</html>
