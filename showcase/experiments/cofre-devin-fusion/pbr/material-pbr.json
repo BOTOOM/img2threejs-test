@@ -1,0 +1,368 @@
+{
+  "shell-lacquer": {
+    "version": "1.0",
+    "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/shell-lacquer.png",
+    "sourceRect": {
+      "x0": 96,
+      "y0": 128,
+      "x1": 116,
+      "y1": 226
+    },
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.791,
+    "estimatedFidelity": 0.791,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+      "albedo": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/shell-lacquer/shell-lacquer_albedo.png",
+        "url": "/pbr/shell-lacquer/shell-lacquer_albedo.png",
+        "channel": "albedo",
+        "source": "reference-sampled two-stop ramp (crop end medians)"
+      },
+      "roughness": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/shell-lacquer/shell-lacquer_roughness.png",
+        "url": "/pbr/shell-lacquer/shell-lacquer_roughness.png",
+        "channel": "roughness",
+        "source": "reference-pixel-extraction"
+      },
+      "height": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/shell-lacquer/shell-lacquer_height.png",
+        "url": "/pbr/shell-lacquer/shell-lacquer_height.png",
+        "channel": "height",
+        "source": "reference-pixel-extraction"
+      },
+      "normal": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/shell-lacquer/shell-lacquer_normal.png",
+        "url": "/pbr/shell-lacquer/shell-lacquer_normal.png",
+        "channel": "normal",
+        "source": "reference-pixel-extraction"
+      },
+      "ao": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/shell-lacquer/shell-lacquer_ao.png",
+        "url": "/pbr/shell-lacquer/shell-lacquer_ao.png",
+        "channel": "ao",
+        "source": "reference-pixel-extraction"
+      }
+    },
+    "albedoRampStops": [
+      "#012D50",
+      "#02776A"
+    ],
+    "palette": [
+      "#09726A",
+      "#052E50",
+      "#0B555A",
+      "#C4A21D",
+      "#614F18"
+    ]
+  },
+  "lid-lacquer": {
+    "version": "1.0",
+    "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/lid-lacquer.png",
+    "sourceRect": {
+      "x0": 66,
+      "y0": 56,
+      "x1": 200,
+      "y1": 114
+    },
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.829,
+    "estimatedFidelity": 0.829,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+      "albedo": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/lid-lacquer/lid-lacquer_albedo.png",
+        "url": "/pbr/lid-lacquer/lid-lacquer_albedo.png",
+        "channel": "albedo",
+        "source": "reference-sampled two-stop ramp (crop end medians)"
+      },
+      "roughness": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/lid-lacquer/lid-lacquer_roughness.png",
+        "url": "/pbr/lid-lacquer/lid-lacquer_roughness.png",
+        "channel": "roughness",
+        "source": "reference-pixel-extraction"
+      },
+      "height": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/lid-lacquer/lid-lacquer_height.png",
+        "url": "/pbr/lid-lacquer/lid-lacquer_height.png",
+        "channel": "height",
+        "source": "reference-pixel-extraction"
+      },
+      "normal": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/lid-lacquer/lid-lacquer_normal.png",
+        "url": "/pbr/lid-lacquer/lid-lacquer_normal.png",
+        "channel": "normal",
+        "source": "reference-pixel-extraction"
+      },
+      "ao": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/lid-lacquer/lid-lacquer_ao.png",
+        "url": "/pbr/lid-lacquer/lid-lacquer_ao.png",
+        "channel": "ao",
+        "source": "reference-pixel-extraction"
+      }
+    },
+    "albedoRampStops": [
+      "#CB88F1",
+      "#451468"
+    ],
+    "palette": [
+      "#CD8EE2",
+      "#170653",
+      "#8A66A6",
+      "#AB7213",
+      "#562382"
+    ]
+  },
+  "gold-trim": {
+    "version": "1.0",
+    "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/gold-trim.png",
+    "sourceRect": {
+      "x0": 46,
+      "y0": 212,
+      "x1": 80,
+      "y1": 231
+    },
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.736,
+    "estimatedFidelity": 0.736,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+      "albedo": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_albedo.png",
+        "url": "/pbr/gold-trim/gold-trim_albedo.png",
+        "channel": "albedo",
+        "source": "reference-sampled two-stop ramp (crop end medians)"
+      },
+      "roughness": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_roughness.png",
+        "url": "/pbr/gold-trim/gold-trim_roughness.png",
+        "channel": "roughness",
+        "source": "reference-pixel-extraction"
+      },
+      "height": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_height.png",
+        "url": "/pbr/gold-trim/gold-trim_height.png",
+        "channel": "height",
+        "source": "reference-pixel-extraction"
+      },
+      "normal": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_normal.png",
+        "url": "/pbr/gold-trim/gold-trim_normal.png",
+        "channel": "normal",
+        "source": "reference-pixel-extraction"
+      },
+      "ao": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/gold-trim/gold-trim_ao.png",
+        "url": "/pbr/gold-trim/gold-trim_ao.png",
+        "channel": "ao",
+        "source": "reference-pixel-extraction"
+      }
+    },
+    "albedoRampStops": [
+      "#B38C0B",
+      "#DBBD41"
+    ],
+    "palette": [
+      "#B8900A",
+      "#DDC151",
+      "#432D42",
+      "#6C5019",
+      "#9D876C"
+    ]
+  },
+  "emblem-glow": {
+    "version": "1.0",
+    "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/emblem-glow.png",
+    "sourceRect": {
+      "x0": 136,
+      "y0": 150,
+      "x1": 198,
+      "y1": 192
+    },
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.86,
+    "estimatedFidelity": 0.86,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+      "albedo": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_albedo.png",
+        "url": "/pbr/emblem-glow/emblem-glow_albedo.png",
+        "channel": "albedo",
+        "source": "reference-sampled two-stop ramp (crop end medians)"
+      },
+      "roughness": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_roughness.png",
+        "url": "/pbr/emblem-glow/emblem-glow_roughness.png",
+        "channel": "roughness",
+        "source": "reference-pixel-extraction"
+      },
+      "height": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_height.png",
+        "url": "/pbr/emblem-glow/emblem-glow_height.png",
+        "channel": "height",
+        "source": "reference-pixel-extraction"
+      },
+      "normal": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_normal.png",
+        "url": "/pbr/emblem-glow/emblem-glow_normal.png",
+        "channel": "normal",
+        "source": "reference-pixel-extraction"
+      },
+      "ao": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_ao.png",
+        "url": "/pbr/emblem-glow/emblem-glow_ao.png",
+        "channel": "ao",
+        "source": "reference-pixel-extraction"
+      }
+    },
+    "albedoRampStops": [
+      "#FEFFF3",
+      "#FFF9AE"
+    ],
+    "palette": [
+      "#EAC53B",
+      "#27404E",
+      "#D3A522",
+      "#FAEB7C",
+      "#906B16"
+    ]
+  },
+  "rivet-iron": {
+    "version": "1.0",
+    "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/rivet-iron.png",
+    "sourceRect": {
+      "x0": 26,
+      "y0": 162,
+      "x1": 34,
+      "y1": 170
+    },
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.749,
+    "estimatedFidelity": 0.749,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+      "albedo": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/rivet-iron/rivet-iron_albedo.png",
+        "url": "/pbr/rivet-iron/rivet-iron_albedo.png",
+        "channel": "albedo",
+        "source": "reference-sampled two-stop ramp (crop end medians)"
+      },
+      "roughness": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/rivet-iron/rivet-iron_roughness.png",
+        "url": "/pbr/rivet-iron/rivet-iron_roughness.png",
+        "channel": "roughness",
+        "source": "reference-pixel-extraction"
+      },
+      "height": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/rivet-iron/rivet-iron_height.png",
+        "url": "/pbr/rivet-iron/rivet-iron_height.png",
+        "channel": "height",
+        "source": "reference-pixel-extraction"
+      },
+      "normal": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/rivet-iron/rivet-iron_normal.png",
+        "url": "/pbr/rivet-iron/rivet-iron_normal.png",
+        "channel": "normal",
+        "source": "reference-pixel-extraction"
+      },
+      "ao": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/rivet-iron/rivet-iron_ao.png",
+        "url": "/pbr/rivet-iron/rivet-iron_ao.png",
+        "channel": "ao",
+        "source": "reference-pixel-extraction"
+      }
+    },
+    "albedoRampStops": [
+      "#1E052E",
+      "#3F2326"
+    ],
+    "palette": [
+      "#1D0833",
+      "#2A0A1D",
+      "#986E25",
+      "#B18B3B",
+      "#563423"
+    ]
+  },
+  "seam-shadow": {
+    "version": "1.0",
+    "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/seam-shadow.png",
+    "sourceRect": {
+      "x0": 230,
+      "y0": 110,
+      "x1": 240,
+      "y1": 120
+    },
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.775,
+    "estimatedFidelity": 0.775,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+      "albedo": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_albedo.png",
+        "url": "/pbr/seam-shadow/seam-shadow_albedo.png",
+        "channel": "albedo",
+        "source": "reference-sampled two-stop ramp (crop end medians)"
+      },
+      "roughness": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_roughness.png",
+        "url": "/pbr/seam-shadow/seam-shadow_roughness.png",
+        "channel": "roughness",
+        "source": "reference-pixel-extraction"
+      },
+      "height": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_height.png",
+        "url": "/pbr/seam-shadow/seam-shadow_height.png",
+        "channel": "height",
+        "source": "reference-pixel-extraction"
+      },
+      "normal": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_normal.png",
+        "url": "/pbr/seam-shadow/seam-shadow_normal.png",
+        "channel": "normal",
+        "source": "reference-pixel-extraction"
+      },
+      "ao": {
+        "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_ao.png",
+        "url": "/pbr/seam-shadow/seam-shadow_ao.png",
+        "channel": "ao",
+        "source": "reference-pixel-extraction"
+      }
+    },
+    "albedoRampStops": [
+      "#15083D",
+      "#020030"
+    ],
+    "palette": [
+      "#030330",
+      "#0D0538",
+      "#736199",
+      "#3E2D64",
+      "#06021F"
+    ]
+  }
+}

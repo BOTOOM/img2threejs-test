@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "emblem-glow",
+  "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/emblem-glow_x6.png",
+  "outDir": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow",
+  "palette": [
+    "#EAC53B",
+    "#27404E",
+    "#D3A522",
+    "#FAEB7C",
+    "#906B16"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_albedo.png",
+      "url": "/pbr/emblem-glow/emblem-glow_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_roughness.png",
+      "url": "/pbr/emblem-glow/emblem-glow_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_height.png",
+      "url": "/pbr/emblem-glow/emblem-glow_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_normal.png",
+      "url": "/pbr/emblem-glow/emblem-glow_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/emblem-glow/emblem-glow_ao.png",
+      "url": "/pbr/emblem-glow/emblem-glow_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 372,
+    "sourceHeight": 252,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 372,
+      "height": 252
+    },
+    "mask": {
+      "backgroundColor": "#CC9565",
+      "backgroundNoise": 193.83,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.3763
+    },
+    "mapStats": {
+      "valueRange": 0.7233,
+      "heightP90Gradient": 0.01357,
+      "roughnessBase": 0.68,
+      "roughnessVariation": 0.05,
+      "normalStrength": 0.172,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#EAC53B",
+      "#27404E",
+      "#D3A522",
+      "#FAEB7C",
+      "#906B16"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

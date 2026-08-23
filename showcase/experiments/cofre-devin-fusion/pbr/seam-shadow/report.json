@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.775,
+  "estimatedFidelity": 0.775,
+  "targetThreshold": 0.7,
+  "materialId": "seam-shadow",
+  "sourceImage": "/home/ubuntu/repos/cofre3d/reconstruction/evidence/material_regions/seam-shadow_x6.png",
+  "outDir": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow",
+  "palette": [
+    "#030330",
+    "#0D0538",
+    "#736199",
+    "#3E2D64",
+    "#06021F"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_albedo.png",
+      "url": "/pbr/seam-shadow/seam-shadow_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_roughness.png",
+      "url": "/pbr/seam-shadow/seam-shadow_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_height.png",
+      "url": "/pbr/seam-shadow/seam-shadow_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_normal.png",
+      "url": "/pbr/seam-shadow/seam-shadow_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "/home/ubuntu/repos/cofre3d/reconstruction/pbr/seam-shadow/seam-shadow_ao.png",
+      "url": "/pbr/seam-shadow/seam-shadow_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 60,
+    "sourceHeight": 60,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 60,
+      "height": 60
+    },
+    "mask": {
+      "backgroundColor": "#080435",
+      "backgroundNoise": 8.307,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 1.0
+    },
+    "mapStats": {
+      "valueRange": 0.3915,
+      "heightP90Gradient": 0.01535,
+      "roughnessBase": 0.682,
+      "roughnessVariation": 0.05,
+      "normalStrength": 0.174,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#030330",
+      "#0D0538",
+      "#736199",
+      "#3E2D64",
+      "#06021F"
+    ]
+  },
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence",
+    "object/background separation is weak",
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}
