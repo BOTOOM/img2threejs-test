@@ -6,6 +6,9 @@
   <meta name="description" content="reloj Devin cloud — procedural Three.js reconstruction of Edward Elric's pocket watch. Compare the reference image with the live 3D scene.">
   <title>reloj Devin cloud — Edward Elric pocket watch</title>
   <link rel="stylesheet" href="../../assets/showcase-shell.css">
+  <style>
+    .tripo-note { margin: 14px 0 0; color: var(--muted); font-size: 0.76rem; line-height: 1.55; }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -16,6 +19,7 @@
       <button class="control" id="splitBtn" type="button" aria-pressed="false" disabled>Compare</button>
       <button class="control" id="reloadBtn" type="button" disabled>Reload</button>
       <a class="control" href="./compare-trellis.html">Compare with TRELLIS GLB</a>
+      <a class="control" href="./tripo-viewer.html">View Tripo AI GLB</a>
     </nav>
   </header>
   <main class="workspace" id="workspace">
@@ -35,6 +39,7 @@
     </section>
     <aside class="reference-panel" aria-label="Reference image">
       <figure><img src="ref.png" alt="Reference image of Edward Elric's pocket watch"><figcaption>Expectation · source image</figcaption></figure>
+      <p class="tripo-note">Additional third-party reference: this Tripo AI mesh was generated from the reference image but was <strong>not used in the procedural reconstruction</strong>; nothing from it was copied. It is a single mesh with 254,177 vertices and 462,840 triangles, without semantic parts.</p>
     </aside>
   </main>
   <script src="../../assets/showcase-shell.js" defer></script>
