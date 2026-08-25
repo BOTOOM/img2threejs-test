@@ -86,6 +86,9 @@
         shadeBtn.setAttribute('aria-pressed', String(grey));
         load();
       });
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) load();
+      });
       load();
     })();
   </script>
