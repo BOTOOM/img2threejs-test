@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gatos 3D Preview</title>
+    <script>
+      (() => {
+        const query = new URLSearchParams(location.search);
+        if (!query.has("model") && !query.has("glb")) {
+          query.set("model", "cats-duo");
+          if (!query.has("az")) query.set("az", "0");
+          if (!query.has("el")) query.set("el", "10");
+          if (!query.has("dist")) query.set("dist", "4.6");
+          if (!query.has("ty")) query.set("ty", "0.05");
+          location.replace(`${location.pathname}?${query.toString()}`);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-DO-q1TRW.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-COC5Z6v4.css">
+  </head>
+  <body>
+    <main id="app" aria-label="3D preview"></main>
+  </body>
+</html>
