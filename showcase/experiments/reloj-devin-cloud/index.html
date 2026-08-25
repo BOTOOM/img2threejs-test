@@ -7,7 +7,7 @@
   <title>reloj Devin cloud — Edward Elric pocket watch</title>
   <link rel="stylesheet" href="../../assets/showcase-shell.css">
   <style>
-    .tripo-note { margin: 14px 0 0; color: var(--muted); font-size: 0.76rem; line-height: 1.55; }
+    .tripo-note, .animation-note { margin: 14px 0 0; color: var(--muted); font-size: 0.76rem; line-height: 1.55; }
   </style>
 </head>
 <body>
@@ -40,6 +40,7 @@
     <aside class="reference-panel" aria-label="Reference image">
       <figure><img src="ref.png" alt="Reference image of Edward Elric's pocket watch"><figcaption>Expectation · source image</figcaption></figure>
       <p class="tripo-note">Additional third-party reference: this Tripo AI mesh was generated from the reference image but was <strong>not used in the procedural reconstruction</strong>; nothing from it was copied. It is a single mesh with 254,177 vertices and 462,840 triangles, without semantic parts.</p>
+      <p class="animation-note">The procedural model also has three toggleable animations that loop indefinitely until paused: the crown lathe, Flamel serpent and star pivots, and chain links. They use no external animation library. From code, use <code>window.__WATCH_ANIMATIONS__.play('chain-wind')</code>; the controller also supports pause, reset, and the other animation controls. These animations apply only to the procedural model. The TRELLIS baseline and Tripo AI mesh are static external references and are not animated.</p>
     </aside>
   </main>
   <script src="../../assets/showcase-shell.js" defer></script>
